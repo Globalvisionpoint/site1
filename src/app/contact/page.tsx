@@ -5,7 +5,7 @@ import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 import { WhatsappIcon } from "@/components/WhatsappIcon";
 
 const pageContent = `
-Contactează echipa digital-online.ro. 
+Contactează echipa Digital-Online.ro. 
 Titlu: Gata să Începi? Hai să Vorbim!
 Sub-titlu: Completează formularul de mai jos și te vom contacta în cel mai scurt timp pentru a discuta despre proiectul tău.
 Formular de contact cu câmpuri pentru nume, email, telefon, mesaj.

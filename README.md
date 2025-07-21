@@ -1,4 +1,4 @@
-# Digital Online
+# Digital-Online.ro
 
 This is a NextJS starter.
 

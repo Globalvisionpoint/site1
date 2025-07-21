@@ -105,7 +105,7 @@ const testimonials = [
 ];
 
 const pageContent = `
-Portofoliu și testimoniale digital-online.ro.
+Portofoliu și testimoniale Digital-Online.ro.
 Proiecte realizate: ${projects.map(p => `${p.title}: ${p.description}`).join(', ')}.
 Testimoniale: ${testimonials.map(t => `${t.name} spune: '${t.review}'`).join(' ')}
 `;

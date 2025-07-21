@@ -22,7 +22,7 @@ export function Footer() {
         </div>
         <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p className="text-center md:text-left">
-            &copy; {year} digital-online.ro. Toate drepturile rezervate.
+            &copy; {year} Digital-Online.ro. Toate drepturile rezervate.
           </p>
           <nav className="flex gap-x-6 gap-y-2 flex-wrap justify-center">
             <Link href="/termeni-si-conditii" className="hover:text-primary transition-colors">

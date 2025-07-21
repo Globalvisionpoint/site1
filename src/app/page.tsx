@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 
 const pageContent = `
-Pagina principală pentru digital-online.ro.
+Pagina principală pentru Digital-Online.ro.
 Titlu Principal: Site-ul pentru afacerea ta, Fără Abonament.
 Sub-titlu: Plătești o singură dată, îl deții pe viață. Realizăm site-uri ultra-rapide și moderne, conectate gratuit la domeniu prin cloud — fără abonamente, fără costuri lunare. Primești și arhiva .zip, ca să îl poți publica oriunde vrei, oricând vrei.
 Butoane: Vezi Preturi Site, Servicii Marketing.

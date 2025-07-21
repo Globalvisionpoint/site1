@@ -2,6 +2,9 @@
 'use server';
 
 import { z } from 'zod';
+import { Resend } from 'resend';
+
+const resend = new Resend('re_i94JCYiY_KzbA2eauvvK2xDNoyXBpakPm');
 
 const contactSchema = z.object({
   name: z.string().min(2, { message: "Numele trebuie să aibă cel puțin 2 caractere." }),
@@ -38,10 +41,29 @@ export async function submitContactForm(prevState: FormState, formData: FormData
     };
   }
 
-  // In a real application, you would send an email or save the data to a database.
-  // For this example, we'll just log the data to the console.
-  console.log('Contact form submitted successfully:');
-  console.log(validatedFields.data);
+  // Trimitere email cu Resend
+  try {
+    const resendResponse = await resend.emails.send({
+      from: 'onboarding@resend.dev',
+      to: 'globalvisionpoint@gmail.com',
+      subject: `Mesaj nou de la ${validatedFields.data.name}`,
+      replyTo: validatedFields.data.email,
+      text: `Nume: ${validatedFields.data.name}\nEmail: ${validatedFields.data.email}\nTelefon: ${validatedFields.data.phone || '-'}\n\nMesaj:\n${validatedFields.data.message}`,
+    });
+    console.log('Resend response:', resendResponse);
+    if (!resendResponse || resendResponse.error) {
+      return {
+        message: 'A apărut o eroare la trimiterea mesajului: ' + (resendResponse?.error?.message || 'Eroare necunoscută'),
+        isSuccess: false,
+      };
+    }
+  } catch (error) {
+    console.error('Resend error:', error);
+    return {
+      message: 'A apărut o eroare la trimiterea mesajului. Te rugăm să încerci din nou sau să ne contactezi direct pe email.',
+      isSuccess: false,
+    };
+  }
 
   return {
     message: 'Mesajul tău a fost trimis! Îți mulțumim și te vom contacta în cel mai scurt timp.',

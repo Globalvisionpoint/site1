@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 
 const pageContent = `
-Servicii de promovare online la digital-online.ro. Prețuri fixe, fără costuri ascunse.
+Servicii de promovare online la Digital-Online.ro. Prețuri fixe, fără costuri ascunse.
 Pachet Start (€109/lună): Ideal pentru afaceri la început de drum. 1 platformă, 1 campanie, setare pixel, optimizare săptămânală.
 Pachet Business (€139/lună): Ideal pentru afaceri care vor să crească. 2 platforme, până la 3 campanii, retargeting.
 Pachet Pro (€179/lună): Ideal pentru scalare. Toate cele 3 platforme (Google, Meta, TikTok), până la 6 campanii, funnel complet.

@@ -1,21 +1,31 @@
-# **App Name**: Digital Online Launchpad
+# **Nume Aplicație**: Digital-Online.ro
 
-## Core Features:
+## Funcționalități de bază:
 
-- Website Packages: Clearly present website creation packages (Standard, Custom, AI Ready) with one-time payment pricing, features, and prominent call-to-action buttons for each.
-- Marketing Packages: Showcase digital marketing services with transparent, fixed-price packages (Start, Business, Pro), outlining the platforms, campaign specifics, and setup costs.
-- Process Diagram: Visually demonstrate the four-step process (Choose, Send, Build, Own) with a diagram, reinforcing simplicity and client ownership.
-- FAQ: Implement a comprehensive FAQ section addressing concerns about costs, modifications, site publishing, and technology choices, reinforcing transparency.
-- Contact Form: A contact form collects potential client details, ensuring ease of contact and quick follow-up regarding their project inquiries.
-- AI-Powered SEO: Integrate a generative AI tool to draft SEO-optimized titles and descriptions for each page, dynamically enhancing search engine visibility based on page content.
-- SEO Optimization: Ensure each page has distinct meta tags, titles, descriptions, schema.org markup, and appropriate H1/H2 headings, tailoring the elements according to page-specific content.
+- **Pachete Website**: Prezentare clară a pachetelor de creare site-uri (Standard, Personalizat, AI Ready) cu prețuri unice, listă de beneficii și butoane de call-to-action vizibile pentru fiecare pachet.
+- **Pachete Marketing**: Prezentare a serviciilor de marketing digital cu pachete la preț fix (Start, Business, Pro), detaliind platformele incluse, specificul campaniilor și costurile de setup.
+- **Diagramă Proces**: Ilustrare vizuală a procesului în 4 pași (Alegi, Trimiți, Construim, Deții), pentru a sublinia simplitatea și faptul că clientul deține controlul.
+- **FAQ**: Secțiune de întrebări frecvente care răspunde la preocupări legate de costuri, modificări, publicare site și alegerea tehnologiei, pentru a oferi transparență.
+- **Formular de Contact**: Formular pentru colectarea detaliilor de la potențiali clienți, pentru a facilita contactul rapid și ușor.
+- **SEO cu AI**: Integrare AI pentru generarea automată a titlurilor și descrierilor SEO pentru fiecare pagină, crescând vizibilitatea în motoarele de căutare pe baza conținutului paginii.
+- **Optimizare SEO**: Fiecare pagină are meta tag-uri distincte, titluri, descrieri, markup schema.org și heading-uri H1/H2 relevante, adaptate conținutului.
 
-## Style Guidelines:
+## Ghid de stil:
 
-- Primary color: Vibrant blue (#29ABE2), inspired by the tech focus of Next.js, conveys innovation.  It is bright enough for a dark scheme.
-- Background color: Dark gray (#333333), a desaturated version of the primary color, creates a modern backdrop.
-- Accent color: Purple (#9D2EC5), an analogous color to blue, offers contrast and draws attention to key elements. This is much brighter and more saturated than the other colors, ensuring good contrast.
-- Headline font: 'Space Grotesk' (sans-serif) for a tech-centric, modern aesthetic. Body font: 'Inter' (sans-serif) for readability in longer texts.
-- Use clean, minimalist icons that complement the tech-focused design, ensuring consistency across the site.
-- Maintain a modern, responsive layout with a fixed menu and footer, ensuring a seamless user experience on all devices. Implement multiple pages, one per section.
-- Incorporate subtle animations to enhance user engagement, such as hover effects on buttons or transitions between sections, reflecting the innovative nature of Digital Online Launchpad.
+- **Culoare principală**: Albastru vibrant (#29ABE2), inspirat de tehnologie și modernism, potrivit pentru un design cu temă închisă.
+- **Culoare de fundal**: Gri închis (#333333), pentru un aspect modern și profesional.
+- **Culoare de accent**: Mov (#9D2EC5), pentru contrast și evidențierea elementelor importante.
+- **Font titluri**: 'Space Grotesk' (sans-serif) pentru un aspect modern, tehnic.
+- **Font text**: 'Inter' (sans-serif) pentru lizibilitate sporită.
+- **Iconografie**: Folosirea de iconuri minimaliste, coerente cu tema tehnologică a site-ului.
+
+## Alte detalii:
+
+- **Fără costuri ascunse**: Prețul afișat este final, fără abonamente sau taxe lunare.
+- **Performanță garantată**: Site-urile sunt optimizate pentru viteză și scoruri excelente în Google PageSpeed.
+- **Control total pentru client**: Clientul primește arhiva .zip cu site-ul și îl poate publica oriunde dorește.
+- **Design responsive**: Site-urile sunt optimizate pentru orice dispozitiv.
+
+---
+
+Acest document servește ca plan și referință pentru dezvoltarea și extinderea platformei Digital-Online.ro

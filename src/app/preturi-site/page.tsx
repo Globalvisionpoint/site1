@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 
 const pageContent = `
-Pachete de creare site web la digital-online.ro. Fără costuri lunare.
+Pachete de creare site web la Digital-Online.ro. Fără costuri lunare.
 Pachet Standard (€149): Site pentru afacerea ta, modern și eficient. Până la 5 secțiuni, Design responsive, Tehnologie Next.js, Livrare în format ZIP, Conectare domeniu gratuită, Optimizat SEO tehnic.
 Pachet Custom (€249): Site creat 100% după viziunea ta. Totul de la Standard, plus: Design personalizat, Până la 8 pagini/secțiuni, Elemente animate & galerii, SEO tehnic avansat, Performanță 90-100 garantată.
 Pachet Bonus "SITE + AI READY" (€349): Soluția completă pentru o afacere modernă. Totul de la Custom, plus: Integrare Chat AI (GPT/Gemini), Integrare Chat WhatsApp, Toți pixelii (Meta, Google, TikTok) instalați, Formular de contact avansat.

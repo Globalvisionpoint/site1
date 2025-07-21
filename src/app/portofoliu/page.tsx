@@ -173,7 +173,7 @@ export default function PortofoliuPage() {
         {/* Testimonials Section */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold font-headline text-white">
-            Ce Spun <span className="text-accent">Clienții Noștri.</span>
+            Ce Spun <span className="text-primary">Clienții Noștri.</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
             Satisfacția clienților este cea mai bună carte de vizită pentru noi.

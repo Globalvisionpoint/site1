@@ -46,8 +46,8 @@ export async function generateMetadata(): Promise<Metadata> {
   } catch (e) {
     console.error('Error generating metadata for FAQ page:', e);
     return {
-      title: 'Întrebări Frecvente (FAQ) - Creare Site | Digital-Online.ro',
-      description: 'Află tot ce trebuie să știi despre creare site fără abonament: costuri, proces, tehnologii (Next.js), modificare ulterioară și mentenanță. Răspunsuri clare și transparente.',
+      title: 'Întrebări Frecvente Creare Site | Web Design Fără Abonament',
+      description: 'Află răspunsuri la cele mai frecvente întrebări despre serviciile noastre de creare site, web design și promovare online. Suport rapid și transparent!',
     };
   }
 }

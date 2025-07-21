@@ -6,15 +6,16 @@ import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 
 const pageContent = `
 Pachete de creare site web la Digital-Online.ro. Fără costuri lunare.
-Pachet Standard (€149): Site pentru afacerea ta, modern și eficient. Până la 5 secțiuni, Design responsive, Tehnologie Next.js, Livrare în format ZIP, Conectare domeniu gratuită, Optimizat SEO tehnic.
-Pachet Custom (€249): Site creat 100% după viziunea ta. Totul de la Standard, plus: Design personalizat, Până la 8 pagini/secțiuni, Elemente animate & galerii, SEO tehnic avansat, Performanță 90-100 garantată.
-Pachet Bonus "SITE + AI READY" (€349): Soluția completă pentru o afacere modernă. Totul de la Custom, plus: Integrare Chat AI (GPT/Gemini), Integrare Chat WhatsApp, Toți pixelii (Meta, Google, TikTok) instalați, Formular de contact avansat.
+Pachet Standard (149€): Site pentru afacerea ta, modern și eficient. Până la 5 secțiuni, Design responsive, Tehnologie Next.js, Livrare în format ZIP, Conectare domeniu gratuită, Optimizat SEO tehnic.
+Pachet Custom (249€): Site creat 100% după viziunea ta. Totul de la Standard, plus: Design personalizat, Până la 8 pagini/secțiuni, Elemente animate & galerii, SEO tehnic avansat, Performanță 90-100 garantată.
+Pachet Bonus "SITE + AI READY" (349€): Soluția completă pentru o afacere modernă. Totul de la Custom, plus: Integrare Chat AI (GPT/Gemini), Integrare Chat WhatsApp, Toți pixelii (Meta, Google, TikTok) instalați, Formular de contact avansat.
 Add-on-uri: Integrare Chat AI cu GPT sau Gemini – 49€, Integrare WhatsApp Business – 29€, Instalare pixel Google / Meta / TikTok – 39€ per platformă, SEO profesional pentru site-uri existente – 89€.
+IMPORTANT: Titlul SEO trebuie să înceapă cu 'Prețuri Pachete Site Web'.
 `;
 
 export async function generateMetadata(): Promise<Metadata> {
   try {
-    const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Pachete Creare Site Web' });
+    const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Prețuri Pachete Site Web | Creare Site Fără Abonament - Digital-Online.ro' });
     return {
       title: seoData.title,
       description: seoData.description,
@@ -22,8 +23,8 @@ export async function generateMetadata(): Promise<Metadata> {
   } catch (e) {
     console.error('Error generating metadata for Pachete Site page:', e);
     return {
-      title: 'Pachete Creare Site Web Fără Abonament | Digital-Online.ro',
-      description: 'Descoperă pachetele noastre pentru creare site pentru afacerea ta cu plată unică. De la 149€, primești un site modern, rapid și optimizat SEO, fără costuri lunare.',
+      title: 'Prețuri Pachete Site Web | Creare Site Fără Abonament - Digital-Online.ro',
+      description: 'Află cât costă un site web modern, rapid și optimizat SEO. Vezi pachetele noastre de creare site fără abonament și alege soluția potrivită pentru afacerea ta!',
     };
   }
 }

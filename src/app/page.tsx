@@ -26,8 +26,8 @@ export async function generateMetadata(): Promise<Metadata> {
   } catch (e) {
     console.error('Error generating metadata for Home page:', e);
     return {
-      title: 'Creare Site pentru afacerea ta Fără Abonament | Digital-Online.ro',
-      description: 'Realizăm site-uri pentru afacerea ta ultra-rapide cu design modern, plată unică și fără abonament. Primești control total și găzduire gratuită în cloud. Vezi pachetele!',
+      title: 'Creare Site Web Profesional Fără Abonament | Web Design România',
+      description: 'Agenție specializată în creare site-uri web moderne, rapide și fără abonament. Oferim web design profesional, prețuri transparente și livrare completă. Vezi portofoliul nostru!',
     };
   }
 }

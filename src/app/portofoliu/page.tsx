@@ -63,42 +63,42 @@ const testimonials = [
   {
     name: "Andrei Popescu",
     company: "CEO la Consultify",
-    avatarUrl: "https://placehold.co/100x100.png",
+    avatarUrl: "/andrei-popescu.webp",
     avatarFallback: "AP",
     review: "Colaborarea cu echipa digital-online.ro a fost excepțională. Ne-au livrat un site ultra-rapid, exact cum am cerut, și ne-au oferit suport tehnic gratuit pentru lansare. Recomand cu încredere!",
   },
   {
     name: "Elena Ionescu",
     company: "Fondator Artizanal",
-    avatarUrl: "https://placehold.co/100x100.png",
+    avatarUrl: "/elena-ionescu.webp",
     avatarFallback: "EI",
     review: "Sunt extrem de mulțumită de noul meu magazin online. Designul este curat, modern și, cel mai important, vinde! Faptul că nu plătesc un abonament lunar este un bonus imens pentru afacerea mea.",
   },
   {
       name: "Mihai Georgescu",
       company: "Manager Pensiunea Transilvania",
-      avatarUrl: "https://placehold.co/100x100.png",
+      avatarUrl: "/mihai-georgescu.webp",
       avatarFallback: "MG",
       review: "Profesionalism și eficiență. Ne-au înțeles perfect nevoile și au creat o aplicație de rezervări care ne-a simplificat enorm munca. Viteza de execuție a fost impresionantă.",
   },
   {
     name: "Laura Dinu",
     company: "Organizator MusicFest",
-    avatarUrl: "https://placehold.co/100x100.png",
+    avatarUrl: "/laura-dinu.webp",
     avatarFallback: "LD",
     review: "Site-ul creat de ei a fost un succes total. A arătat incredibil și a funcționat perfect, chiar și cu trafic intens. Rata de conversie a biletelor a fost peste așteptări.",
   },
   {
       name: "Cristian Olaru",
       company: "Blogger la 'Valiza Plină'",
-      avatarUrl: "https://placehold.co/100x100.png",
+      avatarUrl: "/cristian-olaru.webp",
       avatarFallback: "CO",
       review: "Au transformat viziunea mea într-un blog superb și foarte rapid. Acum fotografiile mele se încarcă instant, iar cititorii laudă constant experiența de navigare. Servicii de top!",
   },
   {
       name: "Familia Rusu",
       company: "Proprietari 'La Taifas'",
-      avatarUrl: "https://placehold.co/100x100.png",
+      avatarUrl: "/familia-rusu.webp",
       avatarFallback: "FR",
       review: "Noul nostru site a atras mult mai mulți clienți. Meniul online este ușor de folosit, iar sistemul de rezervări funcționează fără probleme. O investiție care s-a meritat din prima lună.",
   }
@@ -120,8 +120,8 @@ export async function generateMetadata(): Promise<Metadata> {
   } catch (e) {
     console.error('Error generating metadata for Portofoliu page:', e);
     return {
-      title: 'Portofoliu & Testimoniale Clienți | Digital-Online.ro',
-      description: 'Vezi proiectele noastre de creare site-uri și citește părerile clienților mulțumiți. Descoperă calitatea și profesionalismul serviciilor noastre fără abonament.',
+      title: 'Portofoliu Web Design | Exemple Site-uri Realizate',
+      description: 'Descoperă portofoliul nostru de site-uri web realizate pentru clienți din diverse domenii. Vezi exemple de web design modern, rapid și optimizat SEO!',
     };
   }
 }

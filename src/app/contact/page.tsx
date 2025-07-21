@@ -22,8 +22,8 @@ export async function generateMetadata(): Promise<Metadata> {
   } catch (e) {
     console.error('Error generating metadata for Contact page:', e);
     return {
-      title: 'Contact Creare Site și Promovare | Digital-Online.ro',
-      description: 'Gata să începi proiectul tău? Contactează-ne pentru servicii de creare site-uri pentru afacerea ta sau promovare online. Completează formularul și hai să vorbim!',
+      title: 'Contact Agenție Web Design | Creare Site Fără Abonament',
+      description: 'Contactează-ne pentru o ofertă personalizată de creare site web, web design sau promovare online. Răspundem rapid la orice solicitare!',
     };
   }
 }

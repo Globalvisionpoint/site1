@@ -22,8 +22,8 @@ export async function generateMetadata(): Promise<Metadata> {
   } catch (e) {
     console.error('Error generating metadata for Promovare Online page:', e);
     return {
-      title: 'Servicii Promovare Online (Google, Meta) | Digital-Online.ro',
-      description: 'Pachete de marketing online și promovare pe Google, Meta (Facebook, Instagram) și TikTok. Prețuri fixe, fără comision la buget. Adu-ți clienți noi rapid!',
+      title: 'Promovare Online pentru Afaceri | Google Ads & Facebook Ads',
+      description: 'Creștem vizibilitatea afacerii tale cu servicii de promovare online: Google Ads, Facebook Ads, strategii de marketing digital și consultanță personalizată. Contactează-ne!',
     };
   }
 }

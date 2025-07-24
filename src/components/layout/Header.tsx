@@ -73,7 +73,7 @@ export function Header() {
                 <span className="sr-only">Deschide meniul</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right">
+            <SheetContent side="right" aria-describedby={undefined}>
               <SheetTitle className="sr-only">Meniu</SheetTitle>
               <SheetDescription id="sheet-desc" className="mb-4 mt-2 px-2 text-base leading-relaxed text-muted-foreground">Navigație principală și linkuri către paginile site-ului.</SheetDescription>
               <div className="flex flex-col gap-6">

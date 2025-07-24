@@ -34,6 +34,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Elimin Google Fonts, folosim doar self-hosted */}
+        <link rel="canonical" href="https://digital-online.ro" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify({
@@ -68,6 +69,29 @@ export default function RootLayout({
                   }
                 },
                 "inLanguage": "ro-RO"
+              },
+              {
+                "@type": "Service",
+                "serviceType": "Creare site web, web design, optimizare SEO, promovare online",
+                "provider": {
+                  "@type": "Organization",
+                  "name": "digital-online.ro"
+                },
+                "areaServed": "RO",
+                "availableChannel": {
+                  "@type": "ServiceChannel",
+                  "serviceUrl": "https://digital-online.ro/contact"
+                }
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://digital-online.ro/" },
+                  { "@type": "ListItem", "position": 2, "name": "Prețuri Site", "item": "https://digital-online.ro/preturi-site" },
+                  { "@type": "ListItem", "position": 3, "name": "Portofoliu", "item": "https://digital-online.ro/portofoliu" },
+                  { "@type": "ListItem", "position": 4, "name": "Promovare Online", "item": "https://digital-online.ro/promovare-online" },
+                  { "@type": "ListItem", "position": 5, "name": "Contact", "item": "https://digital-online.ro/contact" }
+                ]
               }
             ]
           })}}

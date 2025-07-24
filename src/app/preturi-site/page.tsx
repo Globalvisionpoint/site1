@@ -105,6 +105,9 @@ export default function PacheteSitePage() {
             <PricingCard key={pkg.title} {...pkg} />
           ))}
         </div>
+        <div className="text-center my-8">
+          <a href="/portofoliu" className="inline-block text-lg font-bold text-primary hover:underline">Vezi exemple de site-uri realizate de noi în portofoliu.</a>
+        </div>
         
         <div className="mt-20">
             <Card className="bg-secondary/50 border-border/50">
@@ -127,10 +130,18 @@ export default function PacheteSitePage() {
         <div className="mt-8">
             <Card className="bg-secondary/50 border-border/50">
                 <CardHeader className="text-center">
-                    <CardTitle className="text-2xl font-headline text-white">Extra servicii</CardTitle>
+                    <CardTitle className="text-2xl font-headline text-white">Extra servicii sau pentru site-uri existente</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <p className="text-center text-lg font-bold text-primary">Preț negociabil</p>
+                    <p className="text-center text-lg text-white mb-2">
+                        Oferim servicii suplimentare precum <span className="font-bold text-primary">editare</span>, <span className="font-bold text-primary">reconfigurare</span> sau <span className="font-bold text-primary">optimizare</span> pentru site-uri deja existente.
+                    </p>
+                    <p className="text-center text-base text-muted-foreground mb-2">
+                        Fiecare proiect este unic, iar prețul se stabilește în funcție de complexitate și cerințe.
+                    </p>
+                    <p className="text-center text-lg font-bold text-primary">
+                        Contactează-ne pentru o ofertă personalizată și consultanță gratuită!
+                    </p>
                 </CardContent>
             </Card>
         </div>

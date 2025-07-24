@@ -6,6 +6,7 @@ import {
 } from "@/components/ui/accordion";
 import type { Metadata } from 'next';
 import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
+import Head from 'next/head';
 
 const faqItems = [
   {
@@ -53,33 +54,50 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function FaqPage() {
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqItems.map(item => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
   return (
-    <div className="py-20 sm:py-24">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline text-white">
-            Ai Întrebări? <span className="text-primary">Avem Răspunsuri.</span>
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
-            Am adunat aici cele mai frecvente întrebări pentru a-ți oferi claritate.
-          </p>
-        </div>
+    <>
+      <Head>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }} />
+      </Head>
+      <div className="py-20 sm:py-24">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold font-headline text-white">
+              Ai Întrebări? <span className="text-primary">Avem Răspunsuri.</span>
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
+              Am adunat aici cele mai frecvente întrebări pentru a-ți oferi claritate.
+            </p>
+          </div>
 
-        <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {faqItems.map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left text-lg hover:no-underline">
-                  {item.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-base text-muted-foreground">
-                  {item.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <div className="max-w-3xl mx-auto">
+            <Accordion type="single" collapsible className="w-full">
+              {faqItems.map((item, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left text-lg hover:no-underline">
+                    {item.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-base text-muted-foreground">
+                    {item.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

@@ -6,7 +6,13 @@ export const headers = async () => [
     headers: [
       {
         key: 'Content-Security-Policy',
-        value: "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
+        // Elimin 'unsafe-inline' și 'unsafe-eval' din script-src pentru securitate sporită
+        value: "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
+      },
+      // CORS strict: permite doar domeniul principal
+      {
+        key: 'Access-Control-Allow-Origin',
+        value: 'https://digital-online.ro'
       },
       {
         key: 'Permissions-Policy',

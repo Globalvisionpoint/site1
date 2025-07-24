@@ -62,7 +62,7 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center gap-4">
                     <div className="p-3 bg-secondary rounded-full flex items-center justify-center">
-                        <img src="/whatsappIco.webp" alt="WhatsApp" className="w-6 h-6" />
+                        <img src="/whatsappIco.webp" alt="Contact WhatsApp Digital-Online.ro" className="w-6 h-6" />
                     </div>
                     <div>
                         <p className="text-muted-foreground">WhatsApp</p>

@@ -6,16 +6,17 @@ import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from '@/components/ui/sheet';
-import { Menu } from 'lucide-react';
+import { Menu, Home, Tag, Rocket, Briefcase, HelpCircle, Mail, X } from 'lucide-react';
 import { Logo } from '@/components/Logo';
 import React from 'react';
+import * as SheetPrimitive from '@radix-ui/react-dialog';
 
 const navLinks = [
-  { href: '/', label: 'Acasă' },
-  { href: '/preturi-site', label: 'Preturi Site' },
-  { href: '/promovare-online', label: 'Promovare Online' },
-  { href: '/portofoliu', label: 'Portofoliu'},
-  { href: '/faq', label: 'FAQ' },
+  { href: '/', label: 'Acasă', icon: Home },
+  { href: '/preturi-site', label: 'Preturi Site', icon: Tag },
+  { href: '/promovare-online', label: 'Promovare Online', icon: Rocket },
+  { href: '/portofoliu', label: 'Portofoliu', icon: Briefcase },
+  { href: '/faq', label: 'FAQ', icon: HelpCircle },
 ];
 
 export function Header() {
@@ -73,26 +74,50 @@ export function Header() {
                 <span className="sr-only">Deschide meniul</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" aria-describedby={undefined}>
-              <SheetTitle className="sr-only">Meniu</SheetTitle>
-              <SheetDescription id="sheet-desc" className="mb-4 mt-2 px-2 text-base leading-relaxed text-muted-foreground">Navigație principală și linkuri către paginile site-ului.</SheetDescription>
-              <div className="flex flex-col gap-6">
-                <Logo />
-                <nav className="flex flex-col gap-4 mt-2">
-                  {[...navLinks, { href: '/contact', label: 'Contact' }].map((link) => (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      className={cn(
-                        'text-lg font-medium transition-colors hover:text-primary',
-                        pathname === link.href ? 'text-primary' : 'text-foreground'
-                      )}
-                      onClick={() => setIsOpen(false)}
-                    >
-                      {link.label}
-                    </Link>
-                  ))}
+            <SheetContent
+              side="right"
+              aria-describedby={undefined}
+              className="!p-0 !bg-white/80 dark:!bg-background/80 !backdrop-blur-xl !rounded-l-2xl !shadow-2xl !max-w-[320px] flex flex-col h-full animate-slide-in"
+            >
+              <div className="flex flex-col h-full">
+                <div className="flex flex-col items-center pt-6 pb-2 px-6 border-b border-border/30 mt-[1cm]">
+                  <Logo />
+                  <SheetTitle className="sr-only">Meniu</SheetTitle>
+                  <SheetDescription id="sheet-desc" className="mb-2 mt-2 text-base leading-relaxed text-muted-foreground text-center">Navigație principală și linkuri către paginile site-ului.</SheetDescription>
+                </div>
+                <nav className="flex flex-col gap-2 px-6 py-4 flex-1 mt-[1cm]">
+                  {[...navLinks, { href: '/contact', label: 'Contact', icon: Mail }].map((link) => {
+                    const Icon = link.icon;
+                    return (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        className={cn(
+                          'flex items-center gap-3 rounded-lg px-4 py-3 text-lg font-medium transition-colors',
+                          pathname === link.href
+                            ? 'bg-primary/10 text-primary shadow-sm'
+                            : 'text-foreground hover:bg-primary/5',
+                          'active:scale-95'
+                        )}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        <Icon className={cn('w-5 h-5', pathname === link.href ? 'text-primary' : 'text-muted-foreground')} />
+                        {link.label}
+                      </Link>
+                    );
+                  })}
                 </nav>
+                <div className="px-6 pb-6 mt-auto">
+                  <a
+                    href="https://wa.me/40758653550"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 w-full rounded-lg bg-green-500 hover:bg-green-600 text-white font-semibold py-3 text-lg shadow transition-colors"
+                  >
+                    <img src="/whatsappIco.webp" alt="WhatsApp" className="h-6 w-6" />
+                    WhatsApp rapid
+                  </a>
+                </div>
               </div>
             </SheetContent>
           </Sheet>

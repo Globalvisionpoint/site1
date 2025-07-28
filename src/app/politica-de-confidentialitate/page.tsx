@@ -43,8 +43,31 @@ export default function PoliticaDeConfidentialitatePage() {
             Ne angajăm să asigurăm că informațiile dumneavoastră sunt în siguranță. Pentru a preveni accesul sau divulgarea neautorizată, am implementat proceduri fizice, electronice și manageriale adecvate pentru a proteja și securiza informațiile pe care le colectăm online.
         </p>
         
-        <p className="mt-8">
-            Aceasta este o versiune simplificată. O politică de confidențialitate completă și conformă cu GDPR va fi implementată.
+        <h2 className="font-headline text-2xl text-white">Drepturile dumneavoastră conform GDPR</h2>
+        <p>
+          Conform Regulamentului General privind Protecția Datelor (GDPR), aveți următoarele drepturi:
+        </p>
+        <ul>
+          <li><strong>Dreptul de acces:</strong> Să știți ce date avem despre dumneavoastră</li>
+          <li><strong>Dreptul de rectificare:</strong> Să corectați datele inexacte</li>
+          <li><strong>Dreptul de ștergere:</strong> Să ștergem datele dumneavoastră ("dreptul de a fi uitat")</li>
+          <li><strong>Dreptul de restricționare:</strong> Să limităm procesarea datelor</li>
+          <li><strong>Dreptul la portabilitate:</strong> Să primiți datele într-un format structurat</li>
+          <li><strong>Dreptul de opoziție:</strong> Să vă opuneți procesării datelor</li>
+        </ul>
+
+        <h2 className="font-headline text-2xl text-white">Contact pentru drepturi GDPR</h2>
+        <p>
+          Pentru a vă exercita drepturile GDPR, ne puteți contacta la:
+        </p>
+        <ul>
+          <li><strong>Email:</strong> contact@digital-online.ro</li>
+          <li><strong>Telefon:</strong> +40758653550</li>
+        </ul>
+
+        <h2 className="font-headline text-2xl text-white">Autoritatea de Supraveghere</h2>
+        <p>
+          Aveți dreptul să depuneți o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP) dacă considerați că prelucrarea datelor dumneavoastră încalcă GDPR-ul.
         </p>
       </div>
     </div>

@@ -61,9 +61,9 @@ export default function ContactPage() {
                     </div>
                 </div>
                 <div className="flex items-center gap-4">
-                    <div className="p-3 bg-secondary rounded-full flex items-center justify-center">
+                    <a href="https://wa.me/40758653550" target="_blank" rel="noopener noreferrer" className="p-3 bg-secondary rounded-full flex items-center justify-center hover:bg-green-100 transition-colors">
                         <img src="/whatsappIco.webp" alt="Contact WhatsApp Digital-Online.ro" className="w-6 h-6" />
-                    </div>
+                    </a>
                     <div>
                         <p className="text-muted-foreground">WhatsApp</p>
                         <a href="https://wa.me/40758653550" target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-primary transition-colors">

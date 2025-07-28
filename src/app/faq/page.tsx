@@ -31,7 +31,23 @@ const faqItems = [
   },
   {
     question: "Cât durează crearea unui site?",
-    answer: "Un Pachet Standard este de obicei gata în 3-5 zile lucrătoare, în timp ce un Pachet Custom sau AI Ready poate dura între 5-10 zile lucrătoare, în funcție de complexitate.",
+    answer: "Un Pachet Standard este de obicei gata în 3-5 zile lucrătoare, în timp ce un Pachet Custom sau Pachet Avansat poate dura între 5-10 zile lucrătoare, în funcție de complexitate. Pe toată această perioadă, clientul este în contact permanent cu echipa noastră pentru sugestii și modificări.",
+  },
+  {
+    question: 'Site-ul va fi optimizat pentru mobil și SEO?',
+    answer: 'Da, toate site-urile noastre sunt responsive (optimizate pentru mobil) și includ optimizare SEO tehnică pentru indexare rapidă și poziționare bună în Google.',
+  },
+  {
+    question: 'Oferiți și găzduire web sau doar site-ul?',
+    answer: 'Oferim găzduire și stocare gratuită pentru site-ul tău, dar poți alege și orice altă găzduire preferi.',
+  },
+  {
+    question: 'Ce se întâmplă dacă vreau modificări după livrare?',
+    answer: 'Poți solicita modificări suplimentare oricând, contra cost, la un tarif avantajos. Pentru pachetele avansate, unele modificări minore pot fi incluse gratuit.',
+  },
+  {
+    question: 'Site-ul va fi sigur și protejat împotriva atacurilor?',
+    answer: 'Da, implementăm toate politicile moderne de securitate web pentru protecția site-ului și a datelor tale.',
   },
 ];
 

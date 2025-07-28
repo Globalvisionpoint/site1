@@ -8,7 +8,7 @@ const pageContent = `
 Pachete de creare site web la Digital-Online.ro. Fără costuri lunare.
 Pachet Standard (149€): Site pentru afacerea ta, modern și eficient. Până la 5 secțiuni, Design responsive, Tehnologie Next.js, Livrare în format ZIP, Conectare domeniu gratuită, Optimizat SEO tehnic.
 Pachet Custom (249€): Site creat 100% după viziunea ta. Totul de la Standard, plus: Design personalizat, Până la 8 pagini/secțiuni, Elemente animate & galerii, SEO tehnic avansat, Performanță 90-100 garantată.
-Pachet Bonus "SITE + AI READY" (349€): Soluția completă pentru o afacere modernă. Totul de la Custom, plus: Integrare Chat AI (GPT/Gemini), Integrare Chat WhatsApp, Toți pixelii (Meta, Google, TikTok) instalați, Formular de contact avansat.
+Pachet Bonus "PACHET AVANSAT" (349€): Soluția completă pentru o afacere modernă. Totul de la Custom, plus: Integrare Chat AI (GPT/Gemini), Integrare Chat WhatsApp, Toți pixelii (Meta, Google, TikTok) instalați, Formular de contact avansat.
 Add-on-uri: Integrare Chat AI cu GPT sau Gemini – 49€, Integrare WhatsApp Business – 29€, Instalare pixel Google / Meta / TikTok – 39€ per platformă, SEO profesional pentru site-uri existente – 89€.
 IMPORTANT: Titlul SEO trebuie să înceapă cu 'Prețuri Pachete Site Web'.
 `;
@@ -36,12 +36,13 @@ const websitePackages = [
     priceSuffix: "plată unică",
     description: "Site pentru afacerea ta, modern și eficient.",
     features: [
-      "Până la 5 secțiuni",
+      "Până la 5 secțiuni / pagini",
       "Design responsive",
       "Tehnologie Next.js",
       "Livrare în format ZIP",
       "Conectare domeniu gratuită",
       "Optimizat SEO tehnic",
+      "Găzduire și stocare gratuită",
     ],
     ctaText: "Comandă Acum",
     ctaLink: "/contact?pachet=standard",
@@ -55,28 +56,31 @@ const websitePackages = [
       "Totul de la Standard",
       "Design 100% personalizat",
       "Până la 8 pagini/secțiuni",
-      "Elemente animate & galerii foto",
+      "Galerie foto/video interactivă",
       "SEO tehnic avansat",
       "Performanță 90-100 garantată",
+      "Sistem de recenzii sau testimoniale integrat",
     ],
     ctaText: "Alege Pachetul Custom",
     ctaLink: "/contact?pachet=custom",
     recommended: true,
   },
   {
-    title: 'PACHET "SITE + AI READY"',
+    title: 'PACHET AVANSAT',
     price: "349 €",
     priceSuffix: "plată unică",
-    description: "Soluția completă pentru o afacere modernă.",
+    description: "Pachetul complet pentru afaceri care vor mai mult.",
     features: [
       "Totul de la Custom",
-      "Integrare Chat AI (GPT/Gemini)",
+      "Texte optimizate sau scrise de la zero",
+      "Generare de imagini pentru site",
+      "Realizare logo personalizat",
+      "Securitate web avansată inclusă",
+      "Peste 8 pagini/secțiuni incluse",
       "Integrare Chat WhatsApp",
-      "Toți pixelii (Meta, Google, TikTok) instalați",
-      "Formular de contact avansat",
     ],
     ctaText: "Vreau Pachetul Complet",
-    ctaLink: "/contact?pachet=ai-ready",
+    ctaLink: "/contact?pachet=avansat",
   },
 ];
 
@@ -134,7 +138,7 @@ export default function PacheteSitePage() {
                 </CardHeader>
                 <CardContent>
                     <p className="text-center text-lg text-white mb-2">
-                        Oferim servicii suplimentare precum <span className="font-bold text-primary">editare</span>, <span className="font-bold text-primary">reconfigurare</span> sau <span className="font-bold text-primary">optimizare</span> pentru site-uri deja existente.
+                        Oferim servicii suplimentare precum <span className="font-bold text-primary">editare</span>, <span className="font-bold text-primary">reconfigurare</span>, <span className="font-bold text-primary">integrare</span> sau <span className="font-bold text-primary">optimizare</span> pentru site-uri deja existente.
                     </p>
                     <p className="text-center text-base text-muted-foreground mb-2">
                         Fiecare proiect este unic, iar prețul se stabilește în funcție de complexitate și cerințe.

@@ -2,10 +2,13 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import type { Metadata } from 'next';
-// import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 import Head from 'next/head';
 
 const faqItems = [
@@ -23,7 +26,7 @@ const faqItems = [
   },
   {
     question: "De ce folosiți Next.js și nu WordPress?",
-    answer: "Pentru viteză, securitate și zero mentenanță. Site-urile noastre statice sunt fundamental mai rapide și mai sigure decât platformele complexe precum WordPress. Asta elimină nevoia de update-uri constante, riscuri de securitate și costuri de mentenanță.",
+    answer: "Pentru viteză, securitate ��i zero mentenanță. Site-urile noastre statice sunt fundamental mai rapide și mai sigure decât platformele complexe precum WordPress. Asta elimină nevoia de update-uri constante, riscuri de securitate și costuri de mentenanță.",
   },
   {
     question: "Ce trebuie să vă ofer pentru a începe?",
@@ -51,30 +54,13 @@ const faqItems = [
   },
 ];
 
-const pageContent = faqItems.map(item => `Î: ${item.question} R: ${item.answer}`).join('\n');
-
-export async function generateMetadata(): Promise<Metadata> {
-  const canonicalUrl = "/faq";
-  // try {
-  //   const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Întrebări Frecvente (FAQ)' });
-  //   return {
-  //     title: seoData.title,
-  //     description: seoData.description,
-  //     alternates: {
-  //       canonical: canonicalUrl,
-  //     },
-  //   };
-  // } catch (e) {
-  //   console.error('Error generating metadata for FAQ page:', e);
-    return {
-      title: 'Întrebări Frecvente Creare Site | Web Design Fără Abonament',
-      description: 'Află răspunsuri la cele mai frecvente întrebări despre serviciile noastre de creare site, web design și promovare online. Suport rapid și transparent!',
-      alternates: {
-        canonical: canonicalUrl,
-      },
-    };
-  // }
-}
+export const metadata: Metadata = {
+  title: 'Întrebări Frecvente Creare Site | Web Design Fără Abonament',
+  description: 'Află răspunsuri la cele mai frecvente întrebări despre serviciile noastre de creare site, web design și promovare online. Suport rapid și transparent!',
+  alternates: {
+    canonical: "/faq",
+  },
+};
 
 export default function FaqPage() {
   const faqStructuredData = {

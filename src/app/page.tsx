@@ -1,36 +1,14 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Landmark, Rocket, KeyRound, CheckCircle } from 'lucide-react';
+import { Landmark, Rocket, KeyRound } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-// import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 
-const pageContent = `
-Pagina principală pentru Digital-Online.ro.
-Titlu Principal: Site-ul pentru afacerea ta, Fără Abonament.
-Sub-titlu: Plătești o singură dată, îl deții pe viață. Realizăm site-uri ultra-rapide și moderne, conectate gratuit la domeniu prin cloud — fără abonamente, fără costuri lunare. Primești și arhiva .zip, ca să îl poți publica oriunde vrei, oricând vrei.
-Butoane: Vezi Preturi Site, Servicii Marketing.
-De ce noi? Fără Costuri Ascunse, Performanță Garantată, Control Total.
-Procesul: Alegi Pachetul, Ne trimiți detaliile, Construim și Livrăm, Îl Deții și Publici.
-Imagine: Prezentare vizuală a unui site modern pe un dispozitiv.
-`;
-
-export async function generateMetadata(): Promise<Metadata> {
-  // try {
-  //   const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Acasă' });
-  //   return {
-  //     title: seoData.title,
-  //     description: seoData.description,
-  //   };
-  // } catch (e) {
-  //   console.error('Error generating metadata for Home page:', e);
-    return {
-      title: 'Creare Site Web Profesional Fără Abonament | Web Design România',
-      description: 'Agenție specializată în creare site-uri web moderne, rapide și fără abonament. Oferim web design profesional, prețuri transparente și livrare completă. Vezi portofoliul nostru!',
-    };
-  // }
-}
+export const metadata: Metadata = {
+  title: 'Creare Site Web Profesional Fără Abonament | Web Design România',
+  description: 'Agenție specializată în creare site-uri web moderne, rapide și fără abonament. Oferim web design profesional, prețuri transparente și livrare completă. Vezi portofoliul nostru!',
+};
 
 export default function Home() {
   return (

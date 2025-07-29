@@ -2,10 +2,13 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Image from "next/image";
 import Link from "next/link";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import type { Metadata } from 'next';
-// import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 import { Star } from "lucide-react";
 import Head from 'next/head';
 
@@ -105,34 +108,13 @@ const testimonials = [
   }
 ];
 
-const pageContent = `
-Portofoliu și testimoniale Digital-Online.ro.
-Proiecte realizate: ${projects.map(p => `${p.title}: ${p.description}`).join(', ')}.
-Testimoniale: ${testimonials.map(t => `${t.name} spune: '${t.review}'`).join(' ')}
-`;
-
-export async function generateMetadata(): Promise<Metadata> {
-  const canonicalUrl = "/portofoliu";
-  // try {
-  //   const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Portofoliu & Testimoniale' });
-  //   return {
-  //     title: seoData.title,
-  //     description: seoData.description,
-  //     alternates: {
-  //       canonical: canonicalUrl,
-  //     },
-  //   };
-  // } catch (e) {
-  //   console.error('Error generating metadata for Portofoliu page:', e);
-    return {
-      title: 'Portofoliu Web Design | Exemple Site-uri Realizate',
-      description: 'Descoperă portofoliul nostru de site-uri web realizate pentru clienți din diverse domenii. Vezi exemple de web design modern, rapid și optimizat SEO!',
-      alternates: {
-        canonical: canonicalUrl,
-      },
-    };
-  // }
-}
+export const metadata: Metadata = {
+  title: 'Portofoliu Web Design | Exemple Site-uri Realizate',
+  description: 'Descoperă portofoliul nostru de site-uri web realizate pentru clienți din diverse domenii. Vezi exemple de web design modern, rapid și optimizat SEO!',
+  alternates: {
+    canonical: "/portofoliu",
+  },
+};
 
 export default function PortofoliuPage() {
   const reviewStructuredData = {

@@ -2,38 +2,14 @@ import { PricingCard } from "@/components/PricingCard";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import type { Metadata } from 'next';
-// import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 
-const pageContent = `
-Servicii de promovare online la Digital-Online.ro. Prețuri fixe, fără costuri ascunse.
-Pachet Start (€109/lună): Ideal pentru afaceri la început de drum. 1 platformă, 1 campanie, setare pixel, optimizare săptămânală.
-Pachet Business (€139/lună): Ideal pentru afaceri care vor să crească. 2 platforme, până la 3 campanii, retargeting.
-Pachet Pro (€179/lună): Ideal pentru scalare. Toate cele 3 platforme (Google, Meta, TikTok), până la 6 campanii, funnel complet.
-Taxe unice de setup: Setup cont & pixel - 49€, Setup complet + GA4 + conversii - 99€.
-`;
-
-export async function generateMetadata(): Promise<Metadata> {
-  const canonicalUrl = "/promovare-online";
-  // try {
-  //   const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Servicii de Promovare Online' });
-  //   return {
-  //     title: seoData.title,
-  //     description: seoData.description,
-  //     alternates: {
-  //       canonical: canonicalUrl,
-  //     },
-  //   };
-  // } catch (e) {
-  //   console.error('Error generating metadata for Promovare Online page:', e);
-    return {
-      title: 'Promovare Online pentru Afaceri | Google Ads & Facebook Ads',
-      description: 'Creștem vizibilitatea afacerii tale cu servicii de promovare online: Google Ads, Facebook Ads, strategii de marketing digital și consultanță personalizată. Contactează-ne!',
-      alternates: {
-        canonical: canonicalUrl,
-      },
-    };
-  // }
-}
+export const metadata: Metadata = {
+  title: 'Promovare Online pentru Afaceri | Google Ads & Facebook Ads',
+  description: 'Creștem vizibilitatea afacerii tale cu servicii de promovare online: Google Ads, Facebook Ads, strategii de marketing digital și consultanță personalizată. Contactează-ne!',
+  alternates: {
+    canonical: "/promovare-online",
+  },
+};
 
 const marketingPackages = [
   {

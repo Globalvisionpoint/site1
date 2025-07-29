@@ -44,10 +44,6 @@ const nextConfig: NextConfig = {
     // Forțează eliminarea codului JavaScript vechi și alte optimizări
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  experimental: {
-    modern: true,
-    polyfillsOptimization: true,
-  },
   typescript: {
     ignoreBuildErrors: true,
   },

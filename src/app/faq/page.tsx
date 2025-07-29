@@ -2,10 +2,6 @@ import {
   Accordion,
   AccordionContent,
   AccordionItem,
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import type { Metadata } from 'next';

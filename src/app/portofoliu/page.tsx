@@ -112,17 +112,24 @@ Testimoniale: ${testimonials.map(t => `${t.name} spune: '${t.review}'`).join(' '
 `;
 
 export async function generateMetadata(): Promise<Metadata> {
+  const canonicalUrl = "/portofoliu";
   try {
     const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Portofoliu & Testimoniale' });
     return {
       title: seoData.title,
       description: seoData.description,
+      alternates: {
+        canonical: canonicalUrl,
+      },
     };
   } catch (e) {
     console.error('Error generating metadata for Portofoliu page:', e);
     return {
       title: 'Portofoliu Web Design | Exemple Site-uri Realizate',
       description: 'Descoperă portofoliul nostru de site-uri web realizate pentru clienți din diverse domenii. Vezi exemple de web design modern, rapid și optimizat SEO!',
+      alternates: {
+        canonical: canonicalUrl,
+      },
     };
   }
 }

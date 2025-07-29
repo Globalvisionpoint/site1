@@ -14,17 +14,24 @@ IMPORTANT: Titlul SEO trebuie să înceapă cu 'Prețuri Pachete Site Web'.
 `;
 
 export async function generateMetadata(): Promise<Metadata> {
+  const canonicalUrl = "/preturi-site";
   try {
     const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Prețuri Pachete Site Web | Creare Site Fără Abonament - Digital-Online.ro' });
     return {
       title: seoData.title,
       description: seoData.description,
+      alternates: {
+        canonical: canonicalUrl,
+      },
     };
   } catch (e) {
     console.error('Error generating metadata for Pachete Site page:', e);
     return {
       title: 'Prețuri Pachete Site Web | Creare Site Fără Abonament - Digital-Online.ro',
       description: 'Află cât costă un site web modern, rapid și optimizat SEO. Vezi pachetele noastre de creare site fără abonament și alege soluția potrivită pentru afacerea ta!',
+      alternates: {
+        canonical: canonicalUrl,
+      },
     };
   }
 }

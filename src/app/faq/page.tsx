@@ -54,17 +54,24 @@ const faqItems = [
 const pageContent = faqItems.map(item => `Î: ${item.question} R: ${item.answer}`).join('\n');
 
 export async function generateMetadata(): Promise<Metadata> {
+  const canonicalUrl = "/faq";
   try {
     const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Întrebări Frecvente (FAQ)' });
     return {
       title: seoData.title,
       description: seoData.description,
+      alternates: {
+        canonical: canonicalUrl,
+      },
     };
   } catch (e) {
     console.error('Error generating metadata for FAQ page:', e);
     return {
       title: 'Întrebări Frecvente Creare Site | Web Design Fără Abonament',
       description: 'Află răspunsuri la cele mai frecvente întrebări despre serviciile noastre de creare site, web design și promovare online. Suport rapid și transparent!',
+      alternates: {
+        canonical: canonicalUrl,
+      },
     };
   }
 }

@@ -13,17 +13,24 @@ Taxe unice de setup: Setup cont & pixel - 49€, Setup complet + GA4 + conversii
 `;
 
 export async function generateMetadata(): Promise<Metadata> {
+  const canonicalUrl = "/promovare-online";
   try {
     const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Servicii de Promovare Online' });
     return {
       title: seoData.title,
       description: seoData.description,
+      alternates: {
+        canonical: canonicalUrl,
+      },
     };
   } catch (e) {
     console.error('Error generating metadata for Promovare Online page:', e);
     return {
       title: 'Promovare Online pentru Afaceri | Google Ads & Facebook Ads',
       description: 'Creștem vizibilitatea afacerii tale cu servicii de promovare online: Google Ads, Facebook Ads, strategii de marketing digital și consultanță personalizată. Contactează-ne!',
+      alternates: {
+        canonical: canonicalUrl,
+      },
     };
   }
 }

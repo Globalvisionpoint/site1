@@ -13,17 +13,24 @@ Date de contact: email contact@digital-online.ro și număr de telefon: +4075865
 `;
 
 export async function generateMetadata(): Promise<Metadata> {
+  const canonicalUrl = "/contact";
   try {
     const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Contact' });
     return {
       title: seoData.title,
       description: seoData.description,
+      alternates: {
+        canonical: canonicalUrl,
+      },
     };
   } catch (e) {
     console.error('Error generating metadata for Contact page:', e);
     return {
       title: 'Contact Agenție Web Design | Creare Site Fără Abonament',
       description: 'Contactează-ne pentru o ofertă personalizată de creare site web, web design sau promovare online. Răspundem rapid la orice solicitare!',
+      alternates: {
+        canonical: canonicalUrl,
+      },
     };
   }
 }
@@ -48,7 +55,7 @@ export default function ContactPage() {
                 <ContactForm />
             </div>
             <div className="space-y-8">
-                <h3 className="text-2xl font-bold font-headline">Detalii de Contact</h3>
+                <h2 className="text-2xl font-bold font-headline">Detalii de Contact</h2>
                 <div className="flex items-center gap-4">
                     <div className="p-3 bg-secondary rounded-full">
                         <Mail className="w-6 h-6 text-primary" />

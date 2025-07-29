@@ -72,19 +72,17 @@ const nextConfig: NextConfig = {
     // ]
   },
   webpack: (config, { isServer }) => {
-    // Ignoră avertismentul specific din 'handlebars' care nu poate fi rezolvat
-    config.ignoreWarnings = [
-      ...(config.ignoreWarnings || []),
-      /require.extensions/,
-    ];
-
-    // Previne eroarea "module not found" pentru pachetele opționale de pe client
+    // Genkit și dependențele sale sunt folosite doar pe server pentru a genera metadata.
+    // Prevenim includerea lor în pachetul pentru client pentru a evita problemele de performanță.
     if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        '@opentelemetry/exporter-jaeger': false,
-        'path': false, // Un alt pachet care poate cauza probleme
-      };
+      config.externals = [
+        ...config.externals,
+        'genkit',
+        '@genkit-ai/core',
+        '@genkit-ai/googleai',
+        '@opentelemetry/api',
+        '@opentelemetry/sdk-node',
+      ];
     }
 
     return config;

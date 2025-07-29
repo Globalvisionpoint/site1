@@ -13,17 +13,7 @@ const contactSchema = z.object({
   message: z.string().min(10, { message: "Mesajul trebuie să aibă cel puțin 10 caractere." }),
 });
 
-export type FormState = {
-    message: string;
-    errors?: {
-        name?: string[];
-        email?: string[];
-        phone?: string[];
-        message?: string[];
-    };
-    isSuccess: boolean;
-};
-
+import type { FormState } from './definitions';
 
 export async function submitContactForm(prevState: FormState, formData: FormData): Promise<FormState> {
   const validatedFields = contactSchema.safeParse({

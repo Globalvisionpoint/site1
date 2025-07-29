@@ -2,7 +2,8 @@
 
 import { useActionState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
-import { submitContactForm, type FormState } from '@/lib/actions';
+import type { FormState } from '@/lib/definitions'; // Importăm tipul din fișierul separat
+import { submitContactForm } from '@/lib/actions';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';

@@ -40,6 +40,10 @@ export const headers = async () => [
 
 const nextConfig: NextConfig = {
   /* config options here */
+  compiler: {
+    // Forțează eliminarea codului JavaScript vechi și alte optimizări
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
   experimental: {
     modern: true,
     polyfillsOptimization: true,
@@ -65,11 +69,6 @@ const nextConfig: NextConfig = {
         pathname: '/**',
       },
     ],
-  },
-  experimental: {
-    // allowedDevOrigins: [
-    //     'https://*.cluster-c3a7z3wnwzapkx3rfr5kz62dac.cloudworkstations.dev'
-    // ]
   },
   headers,
 };

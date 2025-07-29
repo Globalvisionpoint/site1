@@ -71,6 +71,24 @@ const nextConfig: NextConfig = {
     //     'https://*.cluster-c3a7z3wnwzapkx3rfr5kz62dac.cloudworkstations.dev'
     // ]
   },
+  webpack: (config, { isServer }) => {
+    // Ignoră avertismentul specific din 'handlebars' care nu poate fi rezolvat
+    config.ignoreWarnings = [
+      ...(config.ignoreWarnings || []),
+      /require.extensions/,
+    ];
+
+    // Previne eroarea "module not found" pentru pachetele opționale de pe client
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        '@opentelemetry/exporter-jaeger': false,
+        'path': false, // Un alt pachet care poate cauza probleme
+      };
+    }
+
+    return config;
+  },
   headers,
 };
 

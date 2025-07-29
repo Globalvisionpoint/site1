@@ -33,7 +33,6 @@ export default function RootLayout({
     <html lang="ro" className="dark">
       <head>
         {/* Elimin Google Fonts, folosim doar self-hosted */}
-        <link rel="canonical" href="https://digital-online.ro" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify({

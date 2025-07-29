@@ -71,22 +71,6 @@ const nextConfig: NextConfig = {
     //     'https://*.cluster-c3a7z3wnwzapkx3rfr5kz62dac.cloudworkstations.dev'
     // ]
   },
-  webpack: (config, { isServer }) => {
-    // Genkit și dependențele sale sunt folosite doar pe server pentru a genera metadata.
-    // Prevenim includerea lor în pachetul pentru client pentru a evita problemele de performanță.
-    if (!isServer) {
-      config.externals = [
-        ...config.externals,
-        'genkit',
-        '@genkit-ai/core',
-        '@genkit-ai/googleai',
-        '@opentelemetry/api',
-        '@opentelemetry/sdk-node',
-      ];
-    }
-
-    return config;
-  },
   headers,
 };
 

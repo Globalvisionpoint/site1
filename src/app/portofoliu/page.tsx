@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import type { Metadata } from 'next';
-import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
+// import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 import { Star } from "lucide-react";
 import Head from 'next/head';
 
@@ -113,17 +113,17 @@ Testimoniale: ${testimonials.map(t => `${t.name} spune: '${t.review}'`).join(' '
 
 export async function generateMetadata(): Promise<Metadata> {
   const canonicalUrl = "/portofoliu";
-  try {
-    const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Portofoliu & Testimoniale' });
-    return {
-      title: seoData.title,
-      description: seoData.description,
-      alternates: {
-        canonical: canonicalUrl,
-      },
-    };
-  } catch (e) {
-    console.error('Error generating metadata for Portofoliu page:', e);
+  // try {
+  //   const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Portofoliu & Testimoniale' });
+  //   return {
+  //     title: seoData.title,
+  //     description: seoData.description,
+  //     alternates: {
+  //       canonical: canonicalUrl,
+  //     },
+  //   };
+  // } catch (e) {
+  //   console.error('Error generating metadata for Portofoliu page:', e);
     return {
       title: 'Portofoliu Web Design | Exemple Site-uri Realizate',
       description: 'Descoperă portofoliul nostru de site-uri web realizate pentru clienți din diverse domenii. Vezi exemple de web design modern, rapid și optimizat SEO!',
@@ -131,7 +131,7 @@ export async function generateMetadata(): Promise<Metadata> {
         canonical: canonicalUrl,
       },
     };
-  }
+  // }
 }
 
 export default function PortofoliuPage() {

@@ -5,7 +5,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import type { Metadata } from 'next';
-import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
+// import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 import Head from 'next/head';
 
 const faqItems = [
@@ -55,17 +55,17 @@ const pageContent = faqItems.map(item => `Î: ${item.question} R: ${item.answer}
 
 export async function generateMetadata(): Promise<Metadata> {
   const canonicalUrl = "/faq";
-  try {
-    const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Întrebări Frecvente (FAQ)' });
-    return {
-      title: seoData.title,
-      description: seoData.description,
-      alternates: {
-        canonical: canonicalUrl,
-      },
-    };
-  } catch (e) {
-    console.error('Error generating metadata for FAQ page:', e);
+  // try {
+  //   const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Întrebări Frecvente (FAQ)' });
+  //   return {
+  //     title: seoData.title,
+  //     description: seoData.description,
+  //     alternates: {
+  //       canonical: canonicalUrl,
+  //     },
+  //   };
+  // } catch (e) {
+  //   console.error('Error generating metadata for FAQ page:', e);
     return {
       title: 'Întrebări Frecvente Creare Site | Web Design Fără Abonament',
       description: 'Află răspunsuri la cele mai frecvente întrebări despre serviciile noastre de creare site, web design și promovare online. Suport rapid și transparent!',
@@ -73,7 +73,7 @@ export async function generateMetadata(): Promise<Metadata> {
         canonical: canonicalUrl,
       },
     };
-  }
+  // }
 }
 
 export default function FaqPage() {

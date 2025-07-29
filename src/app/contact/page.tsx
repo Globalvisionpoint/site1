@@ -1,7 +1,7 @@
 import { ContactForm } from "@/components/ContactForm";
 import { Mail, Phone } from "lucide-react";
 import type { Metadata } from 'next';
-import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
+// import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 import { WhatsappIcon } from "@/components/WhatsappIcon";
 
 const pageContent = `
@@ -14,17 +14,17 @@ Date de contact: email contact@digital-online.ro și număr de telefon: +4075865
 
 export async function generateMetadata(): Promise<Metadata> {
   const canonicalUrl = "/contact";
-  try {
-    const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Contact' });
-    return {
-      title: seoData.title,
-      description: seoData.description,
-      alternates: {
-        canonical: canonicalUrl,
-      },
-    };
-  } catch (e) {
-    console.error('Error generating metadata for Contact page:', e);
+  // try {
+  //   const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Contact' });
+  //   return {
+  //     title: seoData.title,
+  //     description: seoData.description,
+  //     alternates: {
+  //       canonical: canonicalUrl,
+  //     },
+  //   };
+  // } catch (e) {
+  //   console.error('Error generating metadata for Contact page:', e);
     return {
       title: 'Contact Agenție Web Design | Creare Site Fără Abonament',
       description: 'Contactează-ne pentru o ofertă personalizată de creare site web, web design sau promovare online. Răspundem rapid la orice solicitare!',
@@ -32,7 +32,7 @@ export async function generateMetadata(): Promise<Metadata> {
         canonical: canonicalUrl,
       },
     };
-  }
+  // }
 }
 
 

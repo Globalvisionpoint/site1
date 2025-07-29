@@ -4,7 +4,7 @@ import { Landmark, Rocket, KeyRound, CheckCircle } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
+// import { aiPoweredSeoOptimization } from '@/ai/flows/seo-optimizer';
 
 const pageContent = `
 Pagina principală pentru Digital-Online.ro.
@@ -17,19 +17,19 @@ Imagine: Prezentare vizuală a unui site modern pe un dispozitiv.
 `;
 
 export async function generateMetadata(): Promise<Metadata> {
-  try {
-    const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Acasă' });
-    return {
-      title: seoData.title,
-      description: seoData.description,
-    };
-  } catch (e) {
-    console.error('Error generating metadata for Home page:', e);
+  // try {
+  //   const seoData = await aiPoweredSeoOptimization({ pageContent, pageTitle: 'Acasă' });
+  //   return {
+  //     title: seoData.title,
+  //     description: seoData.description,
+  //   };
+  // } catch (e) {
+  //   console.error('Error generating metadata for Home page:', e);
     return {
       title: 'Creare Site Web Profesional Fără Abonament | Web Design România',
       description: 'Agenție specializată în creare site-uri web moderne, rapide și fără abonament. Oferim web design profesional, prețuri transparente și livrare completă. Vezi portofoliul nostru!',
     };
-  }
+  // }
 }
 
 export default function Home() {

@@ -40,6 +40,10 @@ export const headers = async () => [
 
 const nextConfig: NextConfig = {
   /* config options here */
+  experimental: {
+    modern: true,
+    polyfillsOptimization: true,
+  },
   typescript: {
     ignoreBuildErrors: true,
   },

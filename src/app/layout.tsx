@@ -32,8 +32,6 @@ export default function RootLayout({
   return (
     <html lang="ro" className="dark">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         {/* Elimin Google Fonts, folosim doar self-hosted */}
         <link rel="canonical" href="https://digital-online.ro" />
         <script

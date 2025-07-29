@@ -91,9 +91,29 @@ export default function PromovareOnlinePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {marketingPackages.map((pkg) => (
-            <PricingCard key={pkg.title} {...pkg} idealFor={pkg.description} />
-          ))}
+          {marketingPackages.map((pkg, idx) => {
+            const isPro = pkg.title === "PACHET PRO";
+            const isStart = idx === 0;
+            const isBusiness = pkg.title === "PACHET BUSINESS";
+            return (
+              <PricingCard
+                key={pkg.title}
+                {...pkg}
+                idealFor={pkg.description}
+                className={
+                  "shadow-lg transition-colors " +
+                  (isPro
+                    ? "border-4 border-[#25D366] hover:border-[#25D366] hover:bg-[#25D366]/10"
+                    : isStart
+                      ? "border-[1.5px] border-red-500 hover:border-[#25D366] hover:bg-[#25D366]/10"
+                      : isBusiness
+                        ? "border-2 border-primary hover:border-[#25D366] hover:bg-[#25D366]/10"
+                        : "border-4 border-primary hover:border-[#25D366] hover:bg-[#25D366]/10")
+                }
+                ctaClassName={isPro ? "bg-[#25D366] text-primary-foreground hover:bg-[#1da851]" : ""}
+              />
+            );
+          })}
         </div>
 
         <div className="mt-20">

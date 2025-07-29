@@ -105,9 +105,28 @@ export default function PacheteSitePage() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {websitePackages.map((pkg) => (
-            <PricingCard key={pkg.title} {...pkg} />
-          ))}
+          {websitePackages.map((pkg, idx) => {
+            const isAvansat = pkg.title === "PACHET AVANSAT";
+            const isStandard = idx === 0;
+            const isCustom = pkg.title === "PACHET CUSTOM";
+            return (
+              <PricingCard
+                key={pkg.title}
+                {...pkg}
+                className={
+                  "shadow-lg transition-colors " +
+                  (isAvansat
+                    ? "border-4 border-[#25D366] hover:border-[#25D366] hover:bg-[#25D366]/10"
+                    : isStandard
+                      ? "border-[1.5px] border-red-500 hover:border-[#25D366] hover:bg-[#25D366]/10"
+                      : isCustom
+                        ? "border-2 border-primary hover:border-[#25D366] hover:bg-[#25D366]/10"
+                        : "border-4 border-primary hover:border-[#25D366] hover:bg-[#25D366]/10")
+                }
+                ctaClassName={isAvansat ? "bg-[#25D366] text-primary-foreground hover:bg-[#1da851]" : ""}
+              />
+            );
+          })}
         </div>
         <div className="text-center my-8">
           <a href="/portofoliu" className="inline-block text-lg font-bold text-primary hover:underline">Vezi exemple de site-uri realizate de noi în portofoliu.</a>

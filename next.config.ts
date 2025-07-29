@@ -7,12 +7,12 @@ export const headers = async () => [
       {
         key: 'Content-Security-Policy',
         // CSP securizat - păstrez 'unsafe-inline' pentru Next.js și Tailwind
-        value: "default-src 'self'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com; frame-ancestors 'self'; object-src 'none'; base-uri 'self'; form-action 'self';"
+        value: "default-src 'self' 'unsafe-inline'; img-src 'self' data: https:; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' http://localhost:3000;"
       },
       // CORS strict: permite doar domeniul principal
       {
         key: 'Access-Control-Allow-Origin',
-        value: 'https://digital-online.ro'
+        value: 'http://localhost:3000'
       },
       {
         key: 'Permissions-Policy',

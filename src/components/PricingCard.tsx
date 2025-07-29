@@ -15,6 +15,8 @@ type PricingCardProps = {
   ctaLink: string;
   recommended?: boolean;
   idealFor?: string;
+  className?: string;
+  ctaClassName?: string;
 };
 
 export function PricingCard({
@@ -26,12 +28,15 @@ export function PricingCard({
   ctaText,
   ctaLink,
   recommended = false,
-  idealFor
+  idealFor,
+  className = "",
+  ctaClassName = ""
 }: PricingCardProps) {
   return (
     <Card className={cn(
       "flex flex-col border-border/50",
-      recommended ? "border-primary ring-2 ring-primary shadow-lg" : "hover:border-primary/80 transition-colors"
+      recommended ? "border-primary ring-2 ring-primary shadow-lg" : "hover:border-primary/80 transition-colors",
+      className
     )}>
       {recommended && (
         <Badge variant="default" className="absolute -top-3 left-1/2 -translate-x-1/2 flex gap-1 items-center bg-accent text-accent-foreground">
@@ -64,7 +69,7 @@ export function PricingCard({
         </ul>
       </CardContent>
       <CardFooter>
-        <Button asChild className="w-full" size="lg" variant={recommended ? 'default' : 'secondary'}>
+        <Button asChild className={cn("w-full", ctaClassName)} size="lg" variant={recommended ? 'default' : 'secondary'}>
           <Link href={ctaLink}>{ctaText}</Link>
         </Button>
       </CardFooter>

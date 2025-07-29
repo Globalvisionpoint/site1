@@ -4,6 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CookieConsent } from '@/components/CookieConsent';
+import { inter, spaceGrotesk } from '@/lib/fonts';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://digital-online.ro'),
@@ -97,7 +98,9 @@ export default function RootLayout({
           })}}
         />
       </head>
-      <body className="font-body antialiased flex flex-col min-h-screen">
+      <body
+        className={`${inter.variable} ${spaceGrotesk.variable} font-body antialiased flex flex-col min-h-screen`}
+      >
         <Header />
         <div className="h-8 sm:h-12"></div>
         <main className="flex-grow">{children}</main>

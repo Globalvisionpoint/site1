@@ -78,7 +78,7 @@ export default function FaqPage() {
       </Head>
       <div className="py-20 sm:py-24">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="relative text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold font-headline text-white">
               Ai Întrebări? <span className="text-primary">Avem Răspunsuri.</span>
             </h1>

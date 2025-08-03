@@ -38,12 +38,6 @@ export function PricingCard({
       recommended ? "border-primary ring-2 ring-primary shadow-lg" : "hover:border-primary/80 transition-colors",
       className
     )}>
-      {recommended && (
-        <Badge variant="default" className="absolute -top-3 left-1/2 -translate-x-1/2 flex gap-1 items-center bg-accent text-accent-foreground">
-          <Star className="w-4 h-4" />
-          Recomandat
-        </Badge>
-      )}
       <CardHeader className="text-center">
         <CardTitle className="text-2xl font-headline font-bold">{title}</CardTitle>
         {!idealFor && <CardDescription>{description}</CardDescription>}

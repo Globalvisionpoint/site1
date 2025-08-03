@@ -141,87 +141,89 @@ export default function PortofoliuPage() {
       <Head>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewStructuredData) }} />
       </Head>
-      <div className="py-20 sm:py-24">
-        <div className="container mx-auto px-4">
-          
-          {/* Project Section */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold font-headline text-white">
-              Proiectele Noastre, <span className="text-primary">Inspirația Ta.</span>
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
-              Iată câteva dintre soluțiile web pe care le-am construit pentru clienții noștri.
-            </p>
-          </div>
+      <div className="relative">
+        <div className="py-20 sm:py-24">
+          <div className="container mx-auto px-4">
+            
+            {/* Project Section */}
+            <div className="text-center mb-16 pt-8">
+              <h1 className="text-4xl md:text-5xl font-bold font-headline text-white">
+                Proiectele Noastre, <span className="text-primary">Inspirația Ta.</span>
+              </h1>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
+                Iată câteva dintre soluțiile web pe care le-am construit pentru clienții noștri.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
-            {projects.map((project, index) => (
-              <Card key={index} className="flex flex-col overflow-hidden border-border/50 hover:border-primary transition-all duration-300 transform hover:-translate-y-1">
-                <CardHeader className="p-0">
-                  <Image
-                    src={project.imageUrl}
-                    alt={`Imagine pentru proiectul ${project.title}`}
-                    width={600}
-                    height={400}
-                    className="w-full h-auto object-cover"
-                    data-ai-hint={project.imageHint}
-                  />
-                </CardHeader>
-                <CardContent className="flex-grow p-6">
-                  <CardTitle className="font-headline text-xl mb-2">{project.title}</CardTitle>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
-                  <div className="flex flex-wrap gap-2">
-                      {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
-                  </div>
-                </CardContent>
-                <CardFooter className="p-6 pt-0">
-                  <Button asChild className="w-full" variant="outline">
-                    <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">Vezi Proiectul Live</Link>
-                  </Button>
-                </CardFooter>
-              </Card>
-            ))}
-          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
+              {projects.map((project, index) => (
+                <Card key={index} className="flex flex-col overflow-hidden border-border/50 hover:border-primary transition-all duration-300 transform hover:-translate-y-1">
+                  <CardHeader className="p-0">
+                    <Image
+                      src={project.imageUrl}
+                      alt={`Imagine pentru proiectul ${project.title}`}
+                      width={600}
+                      height={400}
+                      className="w-full h-auto object-cover"
+                      data-ai-hint={project.imageHint}
+                    />
+                  </CardHeader>
+                  <CardContent className="flex-grow p-6">
+                    <CardTitle className="font-headline text-xl mb-2">{project.title}</CardTitle>
+                    <p className="text-muted-foreground mb-4">{project.description}</p>
+                    <div className="flex flex-wrap gap-2">
+                        {project.tags.map(tag => <Badge key={tag} variant="secondary">{tag}</Badge>)}
+                    </div>
+                  </CardContent>
+                  <CardFooter className="p-6 pt-0">
+                    <Button asChild className="w-full" variant="outline">
+                      <Link href={project.liveLink} target="_blank" rel="noopener noreferrer">Vezi Proiectul Live</Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+              ))}
+            </div>
 
-          <div className="text-center my-8">
-            <a href="/contact" className="inline-block text-lg font-bold text-primary hover:underline">Vrei și tu un site performant? Contactează-ne aici.</a>
-          </div>
+            <div className="text-center my-8">
+              <a href="/contact" className="inline-block text-lg font-bold text-primary hover:underline">Vrei și tu un site performant? Contactează-ne aici.</a>
+            </div>
 
-          {/* Testimonials Section */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold font-headline text-white">
-              Ce Spun <span className="text-primary">Clienții Noștri.</span>
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
-              Satisfacția clienților este cea mai bună carte de vizită pentru noi.
-            </p>
-          </div>
+            {/* Testimonials Section */}
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold font-headline text-white">
+                Ce Spun <span className="text-primary">Clienții Noștri.</span>
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
+                Satisfacția clienților este cea mai bună carte de vizită pentru noi.
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-secondary/50 border-border/50 flex flex-col">
-                <CardContent className="p-6 flex-grow">
-                  <div className="flex items-center mb-4">
-                      <Avatar className="h-12 w-12 mr-4">
-                          <AvatarImage src={testimonial.avatarUrl} alt={`Avatar ${testimonial.name}`} />
-                          <AvatarFallback>{testimonial.avatarFallback}</AvatarFallback>
-                      </Avatar>
-                      <div>
-                          <p className="font-bold text-white">{testimonial.name}</p>
-                          <p className="text-sm text-muted-foreground">{testimonial.company}</p>
-                      </div>
-                  </div>
-                  <div className="flex text-yellow-400 mb-4">
-                      {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-current" />)}
-                  </div>
-                  <blockquote className="text-muted-foreground italic border-l-2 border-primary pl-4">
-                    &ldquo;{testimonial.review}&rdquo;
-                  </blockquote>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {testimonials.map((testimonial, index) => (
+                <Card key={index} className="bg-secondary/50 border-border/50 flex flex-col">
+                  <CardContent className="p-6 flex-grow">
+                    <div className="flex items-center mb-4">
+                        <Avatar className="h-12 w-12 mr-4">
+                            <AvatarImage src={testimonial.avatarUrl} alt={`Avatar ${testimonial.name}`} />
+                            <AvatarFallback>{testimonial.avatarFallback}</AvatarFallback>
+                        </Avatar>
+                        <div>
+                            <p className="font-bold text-white">{testimonial.name}</p>
+                            <p className="text-sm text-muted-foreground">{testimonial.company}</p>
+                        </div>
+                    </div>
+                    <div className="flex text-yellow-400 mb-4">
+                        {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-current" />)}
+                    </div>
+                    <blockquote className="text-muted-foreground italic border-l-2 border-primary pl-4">
+                      &ldquo;{testimonial.review}&rdquo;
+                    </blockquote>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
 
+          </div>
         </div>
       </div>
     </>

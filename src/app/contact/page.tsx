@@ -17,7 +17,7 @@ export default function ContactPage() {
     <div className="py-20 sm:py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
+          <div className="relative text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold font-headline text-white">
               Gata să Începi? <span className="text-primary">Hai să Vorbim!</span>
             </h1>

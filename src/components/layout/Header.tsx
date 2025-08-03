@@ -24,8 +24,10 @@ export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="flex h-16 items-center justify-between px-8">
+    <header className="relative sticky top-0 z-50 w-full">
+      <div className="absolute top-0 left-0 right-0 h-1 bg-purple-500 shadow-[0_0_10px_theme(colors.purple.500)]"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#25D366] shadow-[0_0_10px_#25D366]"></div>
+      <div className="relative z-10 flex h-16 items-center justify-between px-4 md:px-8 gap-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-t border-b border-border/40">
         <div className="flex-1">
           <Logo />
         </div>

@@ -4,8 +4,8 @@ import { Check } from "lucide-react";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Prețuri Pachete Site Web | Creare Site Fără Abonament - Digital-Online.ro',
-  description: 'Află cât costă un site web modern, rapid și optimizat SEO. Vezi pachetele noastre de creare site fără abonament și alege soluția potrivită pentru afacerea ta!',
+  title: 'Prețuri Creare Site | Site Ieftin de la 149€ | Digital-Online',
+  description: 'Vezi prețurile noastre fixe pentru creare site. Pachet de la 149€, plată unică. Fără abonament sau costuri ascunse. Alege pachetul potrivit afacerii tale!',
   alternates: {
     canonical: "/preturi-site",
   },

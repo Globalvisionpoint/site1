@@ -4,8 +4,8 @@ import { Separator } from "@/components/ui/separator";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Promovare Online pentru Afaceri | Google Ads & Facebook Ads',
-  description: 'Creștem vizibilitatea afacerii tale cu servicii de promovare online: Google Ads, Facebook Ads, strategii de marketing digital și consultanță personalizată. Contactează-ne!',
+  title: 'Promovare Online | Google, Facebook & TikTok Ads | Digital-Online',
+  description: 'Servicii de promovare online cu prețuri fixe. Administrăm campanii Google Ads, Facebook Ads și TikTok Ads pentru a-ți crește afacerea. Cere o ofertă!',
   alternates: {
     canonical: "/promovare-online",
   },
@@ -14,13 +14,13 @@ export const metadata: Metadata = {
 const marketingPackages = [
   {
     title: "PACHET START",
-    price: "109 €",
+    price: "59 €",
     priceSuffix: "lună",
     description: "Pentru afaceri la început de drum.",
     features: [
       "1 platformă (Google, Meta sau TikTok)",
       "1 campanie activă",
-      "Setare pixel de tracking",
+      "Copywriting pentru reclamă (text + titlu)",
       "Optimizare săptămânală",
       "Raport lunar simplu",
     ],
@@ -29,13 +29,13 @@ const marketingPackages = [
   },
   {
     title: "PACHET BUSINESS",
-    price: "139 €",
+    price: "99 €",
     priceSuffix: "lună",
     description: "Pentru afaceri care vor să crească.",
     features: [
-      "2 platforme la alegere",
+      "2 platforme la alegere (Google, Meta sau TikTok)",
       "Până la 3 campanii active",
-      "Implementare Retargeting",
+      "Copywriting pentru reclamă (text + titlu)",
       "Optimizări & Recomandări strategice",
       "Raport lunar detaliat",
     ],
@@ -45,15 +45,15 @@ const marketingPackages = [
   },
   {
     title: "PACHET PRO",
-    price: "179 €",
+    price: "159 €",
     priceSuffix: "lună",
     description: "Pentru scalare și dominare pe piață.",
     features: [
       "Toate cele 3 platforme (Google, Meta, TikTok)",
       "Până la 6 campanii active",
-      "Funnel complet (A/B testing, lookalike)",
-      "Strategie avansată și consultanță",
-      "Call lunar de strategie",
+      "Copywriting pentru reclamă (text + titlu)",
+      "Optimizări & Recomandări strategice avansate",
+      "Grafică pentru promovare",
     ],
     ctaText: "Devino Pro",
     ctaLink: "/contact?pachet=promo-pro",
@@ -102,27 +102,24 @@ export default function PromovareOnlinePage() {
         <div className="mt-20">
             <Card className="bg-secondary/50 border-border/50">
                 <CardHeader className="text-center">
-                    <CardTitle className="text-3xl font-headline text-white">Setup Inițial (Plată Unică)</CardTitle>
+                    <CardTitle className="text-3xl font-body text-white">Setup Inițial (Plată Unică)</CardTitle>
                     <CardDescription>Pentru conturile noi de reclame, se adaugă o taxă unică pentru configurarea corectă a fundației.</CardDescription>
                 </CardHeader>
                 <CardContent>
                     <div className="max-w-md mx-auto space-y-4">
                         <div className="flex justify-between items-center text-lg">
                             <span>Setup cont & pixel</span>
-                            <span className="font-bold text-primary">49 €</span>
-                        </div>
-                        <Separator />
-                        <div className="flex justify-between items-center text-lg">
-                            <span>Setup complet + GA4 + conversii</span>
-                            <span className="font-bold text-primary">99 €</span>
+                            <span className="font-bold text-primary w-32 text-right">49 €</span>
                         </div>
                         <Separator />
                         <div className="flex justify-between items-center text-lg">
                             <span>Instalare pixel Google / Meta/TikTok</span>
-                            <span className="flex flex-col items-end">
-                                <span className="font-bold text-primary">39 €</span>
-                                <span className="text-sm text-primary">/ platformă</span>
-                            </span>
+                            <span className="font-bold text-primary w-32 text-right">39 € / platformă</span>
+                        </div>
+                        <Separator />
+                        <div className="flex justify-between items-center text-lg">
+                            <span>Setup complet tracking & conturi (GA4 + Meta + Google Ads + TikTok Ads)</span>
+                            <span className="font-bold text-primary w-32 text-right">99 €</span>
                         </div>
                         <Separator />
                     </div>

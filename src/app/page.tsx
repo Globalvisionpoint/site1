@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <section className="relative pt-16 sm:pt-20 pb-6 sm:pb-8 overflow-hidden flex items-center justify-center min-h-[480px]">
+      <section className="relative pt-16 sm:pt-20 pb-6 sm:pb-8 flex items-center justify-center min-h-[480px]">
         <div className="absolute inset-0 w-full h-full z-0">
           <Image
             src="/matrix-blue.webp"

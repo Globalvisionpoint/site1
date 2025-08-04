@@ -24,9 +24,9 @@ export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <header className="relative sticky top-0 z-50 w-full">
+    <header className="sticky top-0 z-50 w-full">
       <div className="absolute top-0 left-0 right-0 h-1 bg-purple-500 shadow-[0_0_10px_theme(colors.purple.500)]"></div>
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-[#25D366] shadow-[0_0_10px_#25D366]"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-1 bg-whatsapp shadow-[0_0_10px_#25D366]"></div>
       <div className="relative z-10 flex h-16 items-center justify-between px-4 md:px-8 gap-4 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-t border-b border-border/40">
         <div className="flex-1">
           <Logo />
@@ -79,7 +79,7 @@ export function Header() {
             <SheetContent
               side="right"
               aria-describedby={undefined}
-              className="!p-0 !bg-white/80 dark:!bg-background/80 !backdrop-blur-xl !rounded-l-2xl !shadow-2xl !max-w-[320px] flex flex-col h-full animate-slide-in"
+              className="!p-0 !bg-white/80 dark:!bg-background/80 !backdrop-blur-xl !rounded-l-2xl !max-w-[320px] flex flex-col h-full animate-slide-in !border-whatsapp shadow-[0_0_10px_theme(colors.custom-green)]"
             >
               <div className="flex flex-col h-full">
                 <div className="flex flex-col items-center pt-6 pb-2 px-6 border-b border-border/30 mt-[1cm]">

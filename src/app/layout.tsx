@@ -45,7 +45,7 @@ export default function RootLayout({
                 "logo": "https://digital-online.ro/logo.png",
                 "contactPoint": {
                   "@type": "ContactPoint",
-                  "telephone": "+40-700-000-000",
+                  "telephone": "+40758653550",
                   "contactType": "Customer Service",
                   "email": "contact@digital-online.ro",
                   "areaServed": "RO",

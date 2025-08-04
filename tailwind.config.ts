@@ -14,7 +14,8 @@ export default {
         code: ['monospace'],
       },
       colors: {
-        whatsapp: '#25D366',
+        'custom-green': 'rgb(37, 211, 102)',
+        whatsapp: '#25D36699',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

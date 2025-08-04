@@ -35,7 +35,7 @@ export function PricingCard({
   return (
     <Card className={cn(
       "flex flex-col border-border/50",
-      recommended ? "border-primary ring-2 ring-primary shadow-lg" : "hover:border-primary/80 transition-colors",
+      recommended ? "shadow-lg" : "hover:border-primary/80 transition-colors",
       className
     )}>
       <CardHeader className="text-center">

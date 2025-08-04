@@ -84,14 +84,14 @@ export default function PromovareOnlinePage() {
                 {...pkg}
                 idealFor={pkg.description}
                 className={
-                  "shadow-lg transition-colors " +
+                  "transition-all duration-300 ease-in-out " +
                   (isPro
-                    ? "border-4 border-[#25D366] hover:border-[#25D366] hover:bg-[#25D366]/10"
+                    ? "shadow-[0_0_10px_#25D366] hover:shadow-[0_0_20px_#25D366] hover:bg-[#25D366]/10"
                     : isStart
-                      ? "border-[1.5px] border-red-500 hover:border-[#25D366] hover:bg-[#25D366]/10"
+                      ? "shadow-[0_0_10px_rgb(239,68,68)] hover:shadow-[0_0_20px_rgb(239,68,68)] hover:bg-red-500/10"
                       : isBusiness
-                        ? "border-2 border-primary hover:border-[#25D366] hover:bg-[#25D366]/10"
-                        : "border-4 border-primary hover:border-[#25D366] hover:bg-[#25D366]/10")
+                        ? "shadow-[0_0_10px_hsl(var(--primary))] hover:shadow-[0_0_20px_hsl(var(--primary))] hover:bg-primary/10"
+                        : "")
                 }
                 ctaClassName={isPro ? "bg-[#25D366] text-primary-foreground hover:bg-[#1da851]" : ""}
               />

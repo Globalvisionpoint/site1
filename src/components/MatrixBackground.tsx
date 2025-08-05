@@ -16,13 +16,10 @@ export default function MatrixBackground({ className = '' }: MatrixBackgroundPro
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // Set canvas size to match parent container (hero section)
+    // Set canvas size to cover full viewport (entire page)
     const resizeCanvas = () => {
-      const parent = canvas.parentElement;
-      if (parent) {
-        canvas.width = parent.offsetWidth;
-        canvas.height = parent.offsetHeight;
-      }
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     };
 
     resizeCanvas();
@@ -95,8 +92,8 @@ export default function MatrixBackground({ className = '' }: MatrixBackgroundPro
   return (
     <canvas
       ref={canvasRef}
-      className={`absolute inset-0 w-full h-full pointer-events-none ${className}`}
-      style={{ zIndex: 0 }}
+      className={`fixed inset-0 w-full h-full pointer-events-none ${className}`}
+      style={{ zIndex: -1 }}
     />
   );
 }

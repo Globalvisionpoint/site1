@@ -13,11 +13,9 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col relative">
+      <MatrixBackground className="opacity-40" />
       <section className="relative pt-16 sm:pt-20 pb-6 sm:pb-8 flex items-center justify-center min-h-[600px] overflow-hidden">
-        <div className="absolute inset-0 w-full h-full z-0">
-          <MatrixBackground className="opacity-40" />
-        </div>
         <div className="container mx-auto px-4 z-10 relative flex flex-col items-center justify-center text-center gap-6">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-headline mb-2 tracking-tighter text-white max-w-3xl mx-auto">
             Site pentru afacerea ta, <span className="text-primary">fără abonament.</span>

@@ -38,29 +38,40 @@ export default function ContactPage() {
                     </div>
                     <div>
                         <p className="text-muted-foreground">Email</p>
-                        <a href="mailto:contact@digital-online.ro" className="text-lg font-medium hover:text-primary transition-colors">
+                        <a href="mailto:contact@digital-online.ro" className="text-lg text-muted-foreground hover:text-primary transition-colors">
                             contact@digital-online.ro
                         </a>
                     </div>
                 </div>
-                <div className="flex items-center gap-4">
-                    <a href="https://wa.me/40758653550" target="_blank" rel="noopener noreferrer" className="p-3 bg-secondary rounded-full flex items-center justify-center hover:bg-green-100 transition-colors">
-                        <img src="/whatsappIco.webp" alt="Contact WhatsApp Digital-Online.ro" className="w-6 h-6" />
+                <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 rounded-lg shadow-lg transform transition-all hover:scale-[1.02] hover:shadow-xl">
+                    <a 
+                        href="https://wa.me/40758653550" 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="flex items-center gap-4 group"
+                    >
+                        <div className="bg-white p-3 rounded-full flex-shrink-0 group-hover:bg-green-100 transition-colors">
+                            <img 
+                                src="/whatsappIco.webp" 
+                                alt="Contact WhatsApp Digital-Online.ro" 
+                                className="w-6 h-6" 
+                            />
+                        </div>
+                        <div className="text-left">
+                            <p className="text-white font-medium text-sm">Click pentru a deschide</p>
+                            <p className="text-white font-bold text-xl">Chat WhatsApp</p>
+                            <p className="text-white/90 text-sm mt-1">Răspundem imediat în aplicație</p>
+                        </div>
                     </a>
-                    <div>
-                        <p className="text-muted-foreground">WhatsApp</p>
-                        <a href="https://wa.me/40758653550" target="_blank" rel="noopener noreferrer" className="text-lg font-medium hover:text-primary transition-colors">
-                            Contactează-ne pe WhatsApp
-                        </a>
-                    </div>
                 </div>
-                <div className="flex items-center gap-4">
-                    <div className="p-3 bg-secondary rounded-full">
-                        <Phone className="w-6 h-6 text-primary" />
+
+                <div className="flex items-center gap-4 opacity-70 hover:opacity-100 transition-opacity">
+                    <div className="p-2 bg-secondary/50 rounded-full">
+                        <Phone className="w-5 h-5 text-muted-foreground" />
                     </div>
                     <div>
-                        <p className="text-muted-foreground">Telefon</p>
-                        <span className="text-lg font-medium">+40758653550</span>
+                        <p className="text-sm text-muted-foreground">Sau sună-ne la</p>
+                        <span className="text-base text-muted-foreground">+40 758 653 550</span>
                     </div>
                 </div>
                 <p className="text-muted-foreground pt-4 border-t border-border">

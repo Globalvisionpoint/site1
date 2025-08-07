@@ -27,7 +27,7 @@
   }
 
   .dark {
-    --background: 0 0% 13%;
+    --background: 0 0% 8%;
     --foreground: 0 0% 98%;
     --card: 0 0% 16%;
     --card-foreground: 0 0% 98%;
@@ -55,5 +55,14 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer base {
+  button,
+  input:where([type="button"]),
+  input:where([type="reset"]),
+  input:where([type="submit"]) {
+    appearance: button;
   }
 }

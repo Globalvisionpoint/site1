@@ -1,5 +1,27 @@
 import type {Config} from 'tailwindcss';
 
+// Plugin to add appearance utilities
+const appearancePlugin = ({ addUtilities }: { addUtilities: any }) => {
+  addUtilities({
+    '.appearance-none': {
+      '-webkit-appearance': 'none',
+      '-moz-appearance': 'none',
+      'appearance': 'none',
+    },
+    '.line-clamp': {
+      'display': '-webkit-box',
+      '-webkit-line-clamp': 'var(--line-clamp, 1)',
+      '-webkit-box-orient': 'vertical',
+      'overflow': 'hidden',
+      'line-clamp': 'var(--line-clamp, 1)',
+    },
+    '.inline-flex-vertical-middle': {
+      'display': 'inline-flex',
+      'vertical-align': 'middle',
+    },
+  });
+};
+
 export default {
   darkMode: ['class'],
   content: [
@@ -96,5 +118,10 @@ export default {
       },
     },
   },
-  plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/line-clamp'),
+    appearancePlugin,
+  ],
 } satisfies Config;

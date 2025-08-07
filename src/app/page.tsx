@@ -15,9 +15,10 @@ export default function Home() {
     <div className="flex flex-col">
       <section className="relative pt-16 sm:pt-20 pb-6 sm:pb-8 flex items-center justify-center min-h-[600px] overflow-hidden">
         <div className="container mx-auto px-4 z-10 relative flex flex-col items-center justify-center text-center gap-6">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-headline mb-2 tracking-tighter text-white max-w-3xl mx-auto">
-            Site pentru afacerea ta, <span className="text-primary">fără abonament.</span>
-          </h1>
+          <div className="text-4xl sm:text-5xl md:text-6xl font-bold font-headline mb-2 tracking-tighter text-white max-w-3xl mx-auto">
+            <span>Site pentru afacerea ta, </span>
+            <span className="text-primary">fără abonament.</span>
+          </div>
           <p className="text-lg md:text-xl max-w-2xl mx-auto text-muted-foreground mb-2">
             Plătești o singură dată, îl deții pe viață. Realizăm site-uri ultra-rapide și moderne, conectate gratuit la domeniu prin cloud — fără abonamente, fără costuri lunare. Primești și arhiva .zip, ca să îl poți publica oriunde vrei, oricând vrei.
           </p>
@@ -79,7 +80,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="cum-functioneaza" className="py-20 sm:py-24 bg-secondary/50">
+      <section id="cum-functioneaza" className="py-20 sm:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold font-headline text-white">Procesul Nostru în 4 Pași Simpli</h2>

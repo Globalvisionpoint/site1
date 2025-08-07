@@ -1,0 +1,21 @@
+/* Fix for appearance property compatibility */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Fix for line-clamp compatibility */
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-clamp: 1;
+}
+
+/* Fix for vertical-align issue - ensure proper display property */
+.vertical-align-middle {
+  display: inline-flex;
+  vertical-align: middle;
+}

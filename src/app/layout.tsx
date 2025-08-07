@@ -5,6 +5,8 @@ import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CookieConsent } from '@/components/CookieConsent';
 import { inter, spaceGrotesk } from '@/lib/fonts';
+import MatrixBackground from '@/components/MatrixBackground';
+import { GoogleTagManager, GoogleTagManagerNoScript } from '@/components/GoogleTagManager';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://digital-online.ro'),
@@ -30,8 +32,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ro" className="dark">
+    <html lang="ro" suppressHydrationWarning className="dark">
       <head>
+        {/* Google Tag Manager */}
+        <GoogleTagManager gtmId="GTM-KZ4VHH8Z" />
         {/* Elimin Google Fonts, folosim doar self-hosted */}
         <script
           type="application/ld+json"
@@ -96,8 +100,11 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${inter.variable} ${spaceGrotesk.variable} font-body antialiased flex flex-col min-h-screen`}
+        className={`${inter.variable} ${spaceGrotesk.variable} font-body antialiased flex flex-col min-h-screen relative`}
       >
+        {/* Google Tag Manager (noscript) */}
+        <GoogleTagManagerNoScript gtmId="GTM-KZ4VHH8Z" />
+        <MatrixBackground className="opacity-40" />
         <Header />
         <div className="h-8 sm:h-12"></div>
         <main className="flex-grow">{children}</main>

@@ -16,11 +16,11 @@ export function Footer() {
 
   return (
     <footer className="bg-secondary/50 border-t border-border/40">
-      <div className="px-8 py-8">
-        <div className="flex justify-center mb-6">
+      <div className="px-8 py-6 md:py-4">
+        <div className="flex justify-center mb-4 md:mb-3">
           <Logo />
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-3 md:gap-2 text-sm text-muted-foreground">
           <p className="text-center md:text-left">
             &copy; {year} Digital-Online.ro. Toate drepturile rezervate.
           </p>

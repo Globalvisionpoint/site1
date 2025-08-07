@@ -4,7 +4,6 @@ import { Landmark, Rocket, KeyRound } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import MatrixBackground from '@/components/MatrixBackground';
 
 export const metadata: Metadata = {
   title: 'Creare Site Web Profesional Fără Abonament | Web Design România',
@@ -13,8 +12,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col relative">
-      <MatrixBackground className="opacity-40" />
+    <div className="flex flex-col">
       <section className="relative pt-16 sm:pt-20 pb-6 sm:pb-8 flex items-center justify-center min-h-[600px] overflow-hidden">
         <div className="container mx-auto px-4 z-10 relative flex flex-col items-center justify-center text-center gap-6">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-headline mb-2 tracking-tighter text-white max-w-3xl mx-auto">

@@ -6,8 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Creare Site Web Profesional Fără Abonament | Web Design România',
-  description: 'Agenție specializată în creare site-uri web moderne, rapide și fără abonament. Oferim web design profesional, prețuri transparente și livrare completă. Vezi portofoliul nostru!',
+  title: 'Creare Site Web Fără Abonament',
+  description: 'Agenție creare site-uri rapide, fără abonament. Web design profesional, preț fix și livrare completă. Vezi portofoliul!',
 };
 
 export default function Home() {

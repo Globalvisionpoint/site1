@@ -4,8 +4,8 @@ import { Separator } from "@/components/ui/separator";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Promovare Online | Google, Facebook & TikTok Ads | Digital-Online',
-  description: 'Servicii de promovare online cu prețuri fixe. Administrăm campanii Google Ads, Facebook Ads și TikTok Ads pentru a-ți crește afacerea. Cere o ofertă!',
+  title: 'Promovare Online (Google, Meta, TikTok)',
+  description: 'Administrăm campanii Google, Facebook și TikTok Ads. Prețuri fixe, optimizări și raportare. Scalează-ți afacerea!',
   alternates: {
     canonical: "/promovare-online",
   },

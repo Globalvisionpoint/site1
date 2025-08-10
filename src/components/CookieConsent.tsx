@@ -18,12 +18,18 @@ export function CookieConsent() {
   }, []);
 
   const handleAccept = () => {
-    localStorage.setItem('cookie_consent', 'accepted');
+    try {
+      localStorage.setItem('cookie_consent', 'accepted');
+      window.dispatchEvent(new CustomEvent('cookie-consent-update', { detail: 'accepted' }));
+    } catch {}
     setShowBanner(false);
   };
 
   const handleDecline = () => {
-    localStorage.setItem('cookie_consent', 'declined');
+    try {
+      localStorage.setItem('cookie_consent', 'declined');
+      window.dispatchEvent(new CustomEvent('cookie-consent-update', { detail: 'declined' }));
+    } catch {}
     setShowBanner(false);
   };
 

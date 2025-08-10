@@ -7,7 +7,7 @@ import { Footer } from '@/components/layout/Footer';
 import { CookieConsent } from '@/components/CookieConsent';
 import { inter, spaceGrotesk } from '@/lib/fonts';
 import MatrixBackground from '@/components/MatrixBackground';
-import { GoogleTagManager, GoogleTagManagerNoScript } from '@/components/GoogleTagManager';
+import { GoogleTagManager } from '@/components/GoogleTagManager';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://digital-online.ro'),
@@ -24,6 +24,20 @@ export const metadata: Metadata = {
     siteName: 'Digital-Online.ro',
     locale: 'ro_RO',
     type: 'website',
+    images: [
+      {
+        url: 'https://digital-online.ro/matrix-blue.webp',
+        width: 1200,
+        height: 630,
+        alt: 'Digital-Online.ro'
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Creare Site Pentru Afacerea Ta Fără Abonament | Digital-Online.ro',
+    description: 'Oferim servicii de creare site-uri pentru afacerea ta, profesionale, ultra-rapide și moderne, cu plată unică.',
+    images: ['https://digital-online.ro/matrix-blue.webp'],
   },
 };
 
@@ -47,7 +61,7 @@ export default function RootLayout({
                 "@type": "Organization",
                 "name": "digital-online.ro",
                 "url": "https://digital-online.ro",
-                "logo": "https://digital-online.ro/logo.png",
+                "logo": "https://digital-online.ro/web-app-manifest-512x512.webp",
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "telephone": "+40758653550",
@@ -68,7 +82,7 @@ export default function RootLayout({
                   "name": "digital-online.ro",
                   "logo": {
                     "@type": "ImageObject",
-                    "url": "https://digital-online.ro/logo.png"
+                    "url": "https://digital-online.ro/web-app-manifest-512x512.webp"
                   }
                 },
                 "inLanguage": "ro-RO"
@@ -103,8 +117,6 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${spaceGrotesk.variable} font-body antialiased flex flex-col min-h-screen relative`}
       >
-        {/* Google Tag Manager (noscript) */}
-        <GoogleTagManagerNoScript gtmId="GTM-KZ4VHH8Z" />
         <MatrixBackground className="opacity-40" />
         <Header />
         <div className="h-8 sm:h-12"></div>

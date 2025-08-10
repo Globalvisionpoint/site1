@@ -51,8 +51,8 @@ const faqItems = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Întrebări Frecvente Creare Site | Web Design Fără Abonament',
-  description: 'Află răspunsuri la cele mai frecvente întrebări despre serviciile noastre de creare site, web design și promovare online. Suport rapid și transparent!',
+  title: 'Întrebări Frecvente',
+  description: 'Răspunsuri clare despre creare site, web design și promovare online. Suport transparent și rapid.',
   alternates: {
     canonical: "/faq",
   },

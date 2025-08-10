@@ -9,11 +9,10 @@ import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetDescription } from 
 import { Menu, Home, Tag, Rocket, Briefcase, HelpCircle, Mail, X } from 'lucide-react';
 import { Logo } from '@/components/Logo';
 import React from 'react';
-import * as SheetPrimitive from '@radix-ui/react-dialog';
 
 const navLinks = [
   { href: '/', label: 'Acasă', icon: Home },
-  { href: '/preturi-site', label: 'Preturi Site', icon: Tag },
+  { href: '/preturi-site', label: 'Prețuri Site', icon: Tag },
   { href: '/promovare-online', label: 'Promovare Online', icon: Rocket },
   { href: '/portofoliu', label: 'Portofoliu', icon: Briefcase },
   { href: '/faq', label: 'FAQ', icon: HelpCircle },
@@ -42,6 +41,7 @@ export function Header() {
                     'transition-colors hover:text-primary',
                     pathname === link.href ? 'text-primary' : 'text-muted-foreground'
                   )}
+                  aria-current={pathname === link.href ? 'page' : undefined}
                 >
                   {link.label}
                 </Link>
@@ -49,7 +49,7 @@ export function Header() {
                <Link href="/contact" className={cn(
                     'transition-colors hover:text-primary',
                     pathname === "/contact" ? 'text-primary' : 'text-muted-foreground'
-                  )}>Contact</Link>
+                  )} aria-current={pathname === '/contact' ? 'page' : undefined}>Contact</Link>
             </nav>
 
             <div className="flex items-center">
@@ -78,16 +78,15 @@ export function Header() {
             </SheetTrigger>
             <SheetContent
               side="right"
-              aria-describedby={undefined}
-              className="!p-0 !bg-white/80 dark:!bg-background/80 !backdrop-blur-xl !rounded-l-2xl !max-w-[320px] flex flex-col h-full animate-slide-in !border-whatsapp shadow-[0_0_10px_theme(colors.custom-green)]"
+              className="!p-0 !bg-white/80 dark:!bg-background/80 !backdrop-blur-xl !rounded-l-2xl !max-w-[320px] flex flex-col h-full !border-whatsapp shadow-[0_0_10px_theme(colors.custom-green)]"
             >
               <div className="flex flex-col h-full">
-                <div className="flex flex-col items-center pt-6 pb-2 px-6 border-b border-border/30 mt-[1cm]">
+                <div className="flex flex-col items-center pt-6 pb-2 px-6 border-b border-border/30 mt-6">
                   <Logo />
                   <SheetTitle className="sr-only">Meniu</SheetTitle>
                   <SheetDescription id="sheet-desc" className="mb-2 mt-2 text-base leading-relaxed text-muted-foreground text-center">Navigație principală și linkuri către paginile site-ului.</SheetDescription>
                 </div>
-                <nav className="flex flex-col gap-2 px-6 py-4 flex-1 mt-[1cm]">
+                <nav className="flex flex-col gap-2 px-6 py-4 flex-1 mt-6">
                   {[...navLinks, { href: '/contact', label: 'Contact', icon: Mail }].map((link) => {
                     const Icon = link.icon;
                     return (
@@ -101,6 +100,7 @@ export function Header() {
                             : 'text-foreground hover:bg-primary/5',
                           'active:scale-95'
                         )}
+                        aria-current={pathname === link.href ? 'page' : undefined}
                         onClick={() => setIsOpen(false)}
                       >
                         <Icon className={cn('w-5 h-5', pathname === link.href ? 'text-primary' : 'text-muted-foreground')} />

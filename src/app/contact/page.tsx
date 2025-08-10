@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import { WhatsappIcon } from "@/components/WhatsappIcon";
 
 export const metadata: Metadata = {
-  title: 'Contact Agenție Web Design | Creare Site Fără Abonament',
-  description: 'Contactează-ne pentru o ofertă personalizată de creare site web, web design sau promovare online. Răspundem rapid la orice solicitare!',
+  title: 'Contact',
+  description: 'Contactează-ne pentru ofertă de creare site, web design sau promovare online. Răspundem rapid!',
   alternates: {
     canonical: "/contact",
   },
@@ -43,7 +43,7 @@ export default function ContactPage() {
                         </a>
                     </div>
                 </div>
-                <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 rounded-lg shadow-lg transform transition-all hover:scale-[1.02] hover:shadow-xl">
+                <div className="bg-gradient-to-r from-green-500-60 to-green-600-60 p-4 rounded-lg shadow-lg transform transition-all hover:scale-[1.02] hover:shadow-xl">
                     <a 
                         href="https://wa.me/40758653550" 
                         target="_blank" 

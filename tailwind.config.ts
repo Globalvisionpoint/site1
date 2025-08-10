@@ -37,6 +37,8 @@ export default {
       },
       colors: {
         'custom-green': 'rgb(37, 211, 102)',
+        'green-500-60': 'rgba(34, 197, 94, 0.6)',
+        'green-600-60': 'rgba(22, 163, 74, 0.6)',
         whatsapp: '#25D36699',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
@@ -121,7 +123,6 @@ export default {
   plugins: [
     require('tailwindcss-animate'),
     require('@tailwindcss/typography'),
-    require('@tailwindcss/line-clamp'),
-    appearancePlugin,
+        appearancePlugin,
   ],
 } satisfies Config;

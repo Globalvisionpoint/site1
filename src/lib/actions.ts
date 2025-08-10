@@ -4,7 +4,10 @@
 import { z } from 'zod';
 import { Resend } from 'resend';
 
-const resend = new Resend('re_i94JCYiY_KzbA2eauvvK2xDNoyXBpakPm');
+const resendApiKey = process.env.RESEND_API_KEY;
+if (!resendApiKey) {
+  console.warn('Missing RESEND_API_KEY environment variable. Email sending is disabled.');
+}
 
 const contactSchema = z.object({
   name: z.string().min(2, { message: "Numele trebuie să aibă cel puțin 2 caractere." }),
@@ -32,10 +35,17 @@ export async function submitContactForm(prevState: FormState, formData: FormData
   }
 
   // Trimitere email cu Resend
+  if (!resendApiKey) {
+    return {
+      message: 'Configurarea email nu este disponibilă momentan. Te rugăm să ne contactezi direct pe email.',
+      isSuccess: false,
+    };
+  }
   try {
+    const resend = new Resend(resendApiKey);
     const resendResponse = await resend.emails.send({
-      from: 'onboarding@resend.dev',
-      to: 'globalvisionpoint@gmail.com',
+      from: process.env.RESEND_FROM || 'onboarding@resend.dev',
+      to: process.env.CONTACT_TO || 'globalvisionpoint@gmail.com',
       subject: `Mesaj nou de la ${validatedFields.data.name}`,
       replyTo: validatedFields.data.email,
       text: `Nume: ${validatedFields.data.name}\nEmail: ${validatedFields.data.email}\nTelefon: ${validatedFields.data.phone || '-'}\n\nMesaj:\n${validatedFields.data.message}`,

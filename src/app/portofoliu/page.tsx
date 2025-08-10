@@ -105,8 +105,8 @@ const testimonials = [
 ];
 
 export const metadata: Metadata = {
-  title: 'Portofoliu Web Design | Exemple Site-uri Realizate',
-  description: 'Descoperă portofoliul nostru de site-uri web realizate pentru clienți din diverse domenii. Vezi exemple de web design modern, rapid și optimizat SEO!',
+  title: 'Portofoliu Web Design',
+  description: 'Vezi site-uri realizate pentru clienți din diverse domenii. Web design modern, rapid și optimizat SEO.',
   alternates: {
     canonical: "/portofoliu",
   },
